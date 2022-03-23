@@ -63,7 +63,7 @@ function make_comp($title, $scores, $fa = false){
 <div class="row comp px-md-2">
 	<div class="col col-sm-6">
 		<?=make_comp("Languages", $competenceService->getGroupedByLevel("CODE"), "code");?>
-		<?=make_comp("Outils", $competenceService->getGroupedByLevel("CLI"), "server");?>
+		<?=make_comp("Outils", $competenceService->getGroupedByLevel("CLI"), "screwdriver-wrench");?>
 	</div>
 	<div class="col col-sm-6">
 		<?=make_comp("Frameworks", $competenceService->getGroupedByLevel("FRAMEWORK"), "code");?>
