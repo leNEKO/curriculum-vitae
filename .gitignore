@@ -1,0 +1,4 @@
+vendor/*
+cache/*
+css/scss_cache
+data/info.json
