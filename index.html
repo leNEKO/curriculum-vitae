@@ -1,650 +1,774 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<title></title>
+  <title></title>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-118003449-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118003449-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      gtag("config", "UA-118003449-1");
+    </script>
 
-		gtag('config', 'UA-118003449-1');
-	</script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      @charset "UTF-8";
+      @import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato");
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato";
+      }
+      body {
+        background-color: #fff;
+        color: #000;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+      hr {
+        border-color: rgba(0, 0, 0, 0.5);
+        margin: 15px -15px 25px -15px;
+      }
+      h4 {
+        margin-top: 15px;
+        border-left: 4px solid #000;
+        padding: 0 0 0 15px;
+        line-height: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: #ccc;
+      }
+      a:hover {
+        color: inherit;
+        text-decoration-color: #000;
+      }
+      .section {
+        page-break-inside: avoid;
+      }
+      .padded {
+        margin: 0 30px;
+      }
+      .comp table {
+        margin: 10px 0 30px 0;
+      }
+      .comp table th,
+      .comp table td {
+        padding-left: 15px;
+      }
+      .comp table th {
+        vertical-align: top;
+        font-size: 65%;
+        line-height: 24px;
+      }
+      .comp span::after {
+        content: ", ";
+      }
+      .comp span:last-child::after {
+        content: "";
+      }
+      @media print {
+        a {
+          text-decoration: none !important;
+        }
+        .noprint {
+          display: none;
+        }
+        .container  {
+          display: table;
+        }
+      }
+      #header {
+        position: running(pageHeader);
+      }
+      @page {
+        size: A4 portrait;
+        margin: 0.5in 0.25in;
+        @top-center {
+          content: element(pageHeader);
+        }
+      }
+      @media screen {
+        .noscreen {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <br class="noprint" />
+    <div class="container">
+      <div id="header">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <address>
+              <h5>
+                Nicolas Masson
+              </h5>
 
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato");
+              <div>
+                <!-- 310, rue des Magnolias Grandiflora<br/> -->
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                <a
+                  href="https://www.google.fr/maps/place/Trévoux"
+                  target="map"
+                  class="text-uppercase"
+                >
+                  01600 Trévoux
+                </a>
+              </div>
 
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: "Lato";
-		}
+              <div>
+                <i class="fas fa-fw fa-envelope"></i>
+                <a href="mailto:le.neko@gmail.com">le.neko@gmail.com</a>
+              </div>
 
-		body {
-			background-color: #FFF;
-			color: #000;
-		}
+              <div>
+                <div>
+                  <i class="fab fa-fw fa-github-alt"></i>
+                  <small
+                    ><a href="https://github.com/leNEKO"
+                      >https://github.com/leNEKO</a
+                    ></small
+                  >
+                </div>
+                <div class="noscreen">
+                  <br />
+                  <small
+                    ><a href="https://leneko.github.io/"
+                      >https://leneko.github.io/</a
+                    >
+                    <i class="fas fa-arrow-left"></i> ce CV à jour</small
+                  >
+                </div>
+              </div>
+            </address>
+          </div>
+          <div class="col-xs-12 col-md-6 d-xs-block d-md-none">
+            <br />
+            <h5>Développeur WEB</h5>
 
-		h3 {
-			font-size: 22px;
-			margin-bottom: 0;
-		}
+            <div>
+              <i class="fa fa-clock"></i>
+              <b>Disponibilité</b><br />
+              ~ July 2022
+            </div>
 
-		hr {
-			border-color: rgba(0, 0, 0, 0.5);
-			margin: 15px -15px 25px -15px;
-		}
+            <div>
+              <i class="fas fa-hourglass-half"></i>
+              <b>Années d'expériences</b><br />
+              18 ans
+            </div>
 
-		h4 {
-			margin-top: 15px;
-			border-left: 4px solid #000;
-			padding: 0 0 0 15px;
-			line-height: 100%;
-		}
+            <div>
+              <i class="fa fa-map"></i>
+              <b>Mobilité géographique</b><br />
+              Région de Lyon<br />
+              <small>
+                <em>(Je n'ai pas le permis)</em>
+              </small>
+            </div>
+          </div>
+          <div class="col-md-6 text-right d-none d-md-block">
+            <h5>Développeur WEB</h5>
 
-		a {
-			color: inherit;
-			text-decoration: underline;
-			text-decoration-color: #ccc;
-		}
+            <div>
+              <i class="fa fa-clock"></i>
+              <b>Disponibilité</b><br />
+              ~ July 2022
+            </div>
 
-		a:hover {
-			color: inherit;
-			text-decoration-color: #000;
-		}
+            <div>
+              <i class="fas fa-hourglass-half"></i>
+              <b>Années d'expériences</b><br />
+              18 ans
+            </div>
 
-		.section {
-			page-break-inside: avoid;
-		}
+            <div>
+              <i class="fa fa-map"></i>
+              <b>Mobilité géographique</b><br />
+              Région de Lyon<br />
+              <small>
+                <em>(Je n'ai pas le permis)</em>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		.padded {
-			margin: 0 30px;
-		}
+      <br />
 
-		.comp table {
-			margin: 10px 0 30px 0;
-		}
+      <div class="cv">
+        <hr class="d-md-none" />
+        <div class="row">
+          <div class="col-xs-6 col-md-4">
+            <h3 class="text-uppercase">Formation</h3>
+            <h4>
+              <small>
+                Autodidacte
+                <small><em>(niveau BAC)</em></small>
+              </small>
+            </h4>
+          </div>
+          <div class="col-xs-6 col-md-8">
+            <br class="d-md-none" />
+            <h3 class="text-uppercase">Langues</h3>
+            <h4>
+              <small>
+                Français, Anglais <small><em>(niveau B2)</em></small>
+              </small>
+            </h4>
+          </div>
+        </div>
+        <br class="d-md-none" />
+        <hr />
+        <h3 class="text-uppercase">
+          <a
+            href="https://docs.google.com/spreadsheets/d/10NMp5EHkIQexaXeaxUbqfIkLK0pt6yrQPe9IZwujdhQ/edit#gid=0"
+            target="comp"
+          >
+            Compétences
+          </a>
+        </h3>
+        <br />
+        <div class="row comp px-md-2">
+          <div class="col col-sm-6">
+            <h5>
+              <i class="fa fa-code fa-fw"></i>
+              Languages
+            </h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-python"></i>
+                      <a
+                        class="tag"
+                        href="https://www.python.org/"
+                        target="techno"
+                        >PYTHON</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a
+                        class="tag"
+                        href="http://php.net/manual/fr/intro-whatis.php"
+                        target="techno"
+                        >PHP</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-sass"></i>
+                      <a
+                        class="tag"
+                        href="https://sass-lang.com/"
+                        target="techno"
+                        >SASS</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-solid fa-database"></i>
+                      <a class="tag">SQL</a></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-js"></i>
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/JavaScript"
+                        target="techno"
+                        >Javascript</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-solid fa-terminal"></i>
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Bourne-Again_shell"
+                        target="techno"
+                        >Shell</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-rust"></i>
+                      <a class="tag">RUST</a></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>
+              <i class="fa fa-screwdriver-wrench fa-fw"></i>
+              Outils
+            </h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-solid fa-lock"></i>
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Secure_Shell"
+                        target="techno"
+                        >SSH</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a class="tag">Xdebug</a></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-git"></i>
+                      <a class="tag" href="https://git-scm.com/" target="techno"
+                        >GIT</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a
+                        class="tag"
+                        href="https://getcomposer.org/"
+                        target="techno"
+                        >Composer</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Make"
+                        target="techno"
+                        >make</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Rsync"
+                        target="techno"
+                        >rsync</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col col-sm-6">
+            <h5>
+              <i class="fa fa-code fa-fw"></i>
+              Frameworks
+            </h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-symfony"></i>
+                      <a class="tag">Symfony</a></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a class="tag">Phpunit</a></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-python"></i>
+                      <a
+                        class="tag"
+                        href="http://flask.pocoo.org/"
+                        target="techno"
+                        >Flask</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-rust"></i>
+                      <a class="tag" href="https://actix.rs/" target="techno"
+                        >Actix</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-js"></i>
+                      <a class="tag" href="https://jquery.com/" target="techno"
+                        >Jquery</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-python"></i>
+                      <a
+                        class="tag"
+                        href="https://palletsprojects.com/p/flask/"
+                        target="techno"
+                        >Click</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-python"></i>
+                      <a
+                        class="tag"
+                        href="https://docs.pytest.org"
+                        target="techno"
+                        >Pytest</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a
+                        class="tag"
+                        href="https://www.slimframework.com/"
+                        target="techno"
+                        >Slim</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>
+              <i class="fa fa-server fa-fw"></i>
+              Services
+            </h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-docker"></i>
+                      <a class="tag">Docker</a></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-php"></i>
+                      <a class="tag">Blackfire</a></span
+                    >
+                    <span class="text-nowrap"> <a class="tag">Redis</a></span>
+                    <span class="text-nowrap"> <a class="tag">AMQP</a></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap"> <a class="tag">Nginx</a></span>
+                    <span class="text-nowrap">
+                      <a
+                        class="tag"
+                        href="https://httpd.apache.org/"
+                        target="techno"
+                        >Apache</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <a
+                        class="tag"
+                        href="https://www.mysql.com/fr/"
+                        target="techno"
+                        >MySQL</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Cron"
+                        target="techno"
+                        >Cron</a
+                      ></span
+                    >
+                    <span class="text-nowrap">
+                      <a class="tag">Circle-CI</a></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-algolia"></i>
+                      <a class="tag" href=" " target="techno">Algolia</a></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>
+              <i class="fa fa-save fa-fw"></i>
+              OS
+            </h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-linux"></i>
+                      <a
+                        class="tag"
+                        href="https://fr.wikipedia.org/wiki/Linux"
+                        target="techno"
+                        >LINUX</a
+                      ></span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-right text-nowrap">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i
+                    ><i class="fa fa-star"></i>
+                  </th>
+                  <td>
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-apple"></i>
+                      <a class="tag">OSX</a></span
+                    >
+                    <span class="text-nowrap">
+                      <i class="fa-brands fa-windows"></i>
+                      <a class="tag">Windows</a></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr />
 
-		.comp table th,
-		.comp table td {
-			padding-left: 15px;
-		}
+        <div class="section">
+          <h3 class="text-uppercase">Expérience professionnelle</h3>
+          <h4>
+            <small>Depuis 2018</small><br />
+            Développeur Backend Senior<br /><small>@Wizaplace</small>
+          </h4>
+          <br />
 
-		.comp table th {
-			vertical-align: top;
-			font-size: 65%;
-			line-height: 24px;
-		}
+          <div class="row px-md-2">
+            <div class="col col-sm-6">
+              <ul>
+                <li>
+                  Maintenance applicative au sein du RUN. Rôle transverse en
+                  étroite collaboration avec l'INFRA et le support client.
+                </li>
+                <li>
+                  Benchmarking / améliorations des performances de
+                  l'application.
+                </li>
+                <li>
+                  Développement de features.
+                </li>
+              </ul>
+            </div>
+            <div class="col col-sm-6">
+              <ul>
+                <li>
+                  Tooling / scripting.
+                </li>
+                <li>
+                  Reprise de données / ETL.
+                </li>
+                <li>
+                  Patch management / maj sécurité.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-		.comp span::after {
-			content: ", ";
-		}
+        <div class="section">
+          <h4>
+            <small>2008 &mdash; 2018</small><br />
+            Développeur WEB <br /><small>@Hurleur média</small>
+          </h4>
+          <br />
 
-		.comp span:last-child::after {
-			content: "";
-		}
+          <div class="row px-md-2">
+            <div class="col col-sm-6">
+              <h5>
+                <i class="fa fa-shopping-cart fa-fw"></i>
+                Développement et exploitation d'une plateforme d'<b
+                  >eCommerce</b
+                >
+              </h5>
+              <ul>
+                <li>
+                  <b>La Ribouldingue / Henry's France</b>
+                  <a target="site" href="https://laribouldingue.com"
+                    >www.laribouldingue.com</a
+                  >
+                </li>
+                <li>
+                  <b>L'Éclat de Verre</b>
+                </li>
+                <li>
+                  <b>Presses universitaires de Lyon</b>
+                  …
+                </li>
+              </ul>
+              <br />
+            </div>
 
-		@media print {
-			a {
-				text-decoration: none !important;
-			}
+            <div class="col col-xs-12 col-sm-6">
+              <h5>
+                <i class="fas fa-pencil-alt fa-fw"></i>
+                Développement et exploitation d'une plateforme <b>CMS</b>
+              </h5>
+              <ul>
+                <li>
+                  <b>Grim Edif</b>
+                </li>
+                <li>
+                  <a target="site" href="http://www.academiedeversailles.com"
+                    >www.academiedeversailles.com</a
+                  >
+                </li>
+                <li>
+                  <a target="site" href="http://gerarduferas.com"
+                    >www.gerarduferas.com</a
+                  >
+                  …
+                </li>
+              </ul>
+              <br class="d-xs-block d-md-none" />
+            </div>
 
-			.noprint {
-				display: none;
-			}
+            <div class="col-xs-12 col-sm-6">
+              <h5>
+                <i class="fa fa-server fa-fw"></i>
+                <b>Administration de serveurs Linux</b> dédiés et virtualisés
+              </h5>
+              <ul>
+                <li><b>Serveur HTTP</b> : Apache</li>
+                <li><b>DB</b> : MySQL</li>
+                <li><b>Monitoring</b> : Munin</li>
+                <li><b>Backups</b> : Automysql, Rsync, Cron, Unison …</li>
+              </ul>
+              <br class="d-xs-block d-md-none" />
+            </div>
 
-			.container {
-				display: table;
-			}
-		}
+            <div class="col-xs-12 col-sm-6">
+              <h5>
+                <i class="fa fa-paint-brush fa-fw"></i>
+                Quelques tâches de créations graphiques
+              </h5>
+              <ul>
+                <li>Web design, UI</li>
+                <li>Logo, Charte graphique</li>
+                <li>Prépresse : PAO, flyers, affiches …</li>
+              </ul>
+              <br class="d-xs-block d-md-none" />
+            </div>
+          </div>
+        </div>
 
-		#header {
-			position: running(pageHeader);
-		}
+        <div class="section">
+          <h4>
+            <small>2004 &mdash; 2008</small><br />
+            Développeur Flash/Actionscript <br /><small>@Indépendant</small>
+          </h4>
 
-		@page {
-			size: A4 portrait;
-			margin: 0.5in 0.25in;
+          <div class="padded">
+            <ul>
+              <li>
+                Créations de site dynamique avec la plateforme Flash /
+                ActionScript,
+              </li>
+              <li>
+                applications interactives,
+              </li>
+              <li>
+                animations algorithmiques, art génératif
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			@top-center {
-				content: element(pageHeader);
-			}
-		}
-
-		@media screen {
-			.noscreen {
-				display: none;
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<br class="noprint" />
-	<div class="container">
-		<div id="header">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<address>
-						<h5>
-							Nicolas Masson
-						</h5>
-
-						<div>
-							<!-- 310, rue des Magnolias Grandiflora<br/> -->
-							<i class="fas fa-map-marker-alt fa-fw"></i>
-							<a href="https://www.google.fr/maps/place/Trévoux" target="map" class="text-uppercase">
-								01600 Trévoux
-							</a>
-						</div>
-
-						<div>
-							<i class="fas fa-fw fa-envelope"></i> <a
-								href="mailto:le.neko@gmail.com">le.neko@gmail.com</a>
-						</div>
-
-						<div>
-							<div>
-								<i class="fab fa-fw fa-github-alt"></i> <small><a
-										href="https://github.com/leNEKO">https://github.com/leNEKO</a></small>
-							</div>
-							<div class="noscreen">
-								<br />
-								<small><a href="https://leneko.github.io/">https://leneko.github.io/</a> <i
-										class="fas fa-arrow-left"></i> ce CV à jour</small>
-							</div>
-						</div>
-						</small>
-
-					</address>
-
-				</div>
-				<div class="col-xs-12 col-md-6 d-xs-block d-md-none">
-					<br />
-					<h5>Développeur WEB Senior</h5>
-
-					<div>
-						<i class="fa fa-clock"></i>
-						<b>Disponibilité</b><br />
-						~ June 2022
-					</div>
-
-					<div>
-						<i class="fas fa-hourglass-half"></i>
-						<b>Années d'expériences</b><br />
-						18 ans
-					</div>
-
-					<div>
-						<i class="fa fa-map"></i>
-						<b>Mobilité géographique</b><br />
-						Région de Lyon<br />
-						<small>
-							<em>(Je n'ai pas le permis)</em>
-						</small>
-
-					</div>
-				</div>
-				<div class="col-md-6 text-right d-none d-md-block">
-					<h5>Développeur WEB Senior</h5>
-
-					<div>
-						<i class="fa fa-clock"></i>
-						<b>Disponibilité</b><br />
-						~ June 2022
-					</div>
-
-					<div>
-						<i class="fas fa-hourglass-half"></i>
-						<b>Années d'expériences</b><br />
-						18 ans
-					</div>
-
-					<div>
-						<i class="fa fa-map"></i>
-						<b>Mobilité géographique</b><br />
-						Région de Lyon<br />
-						<small>
-							<em>(Je n'ai pas le permis)</em>
-						</small>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<br />
-
-		<div class="cv">
-			<hr class="d-md-none" />
-			<div class="row">
-				<div class="col-xs-6 col-md-4">
-					<h3 class="text-uppercase">Formation</h3>
-					<h4>
-						<small>
-							Autodidacte
-							<small><em>(niveau BAC)</em></small>
-						</small>
-					</h4>
-				</div>
-				<div class="col-xs-6 col-md-8">
-					<br class="d-md-none" />
-					<h3 class="text-uppercase">Langues</h3>
-					<h4>
-						<small>
-							Français, Anglais <small><em>(niveau B2)</em></small>
-						</small>
-					</h4>
-				</div>
-			</div>
-			<br class="d-md-none" />
-			<hr />
-			<h3 class="text-uppercase">
-				<a href="https://docs.google.com/spreadsheets/d/10NMp5EHkIQexaXeaxUbqfIkLK0pt6yrQPe9IZwujdhQ/edit#gid=0"
-					target="comp">
-					Compétences
-				</a>
-			</h3>
-			<br />
-			<div class="row comp px-md-2">
-				<div class="col col-sm-6">
-					<h5>
-						<i class="fa fa-code fa-fw"></i>
-						Languages
-					</h5>
-					<table>
-						<tbody>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-python"></i>
-										<a class="tag" href="https://www.python.org/" target="techno">PYTHON</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag" href="http://php.net/manual/fr/intro-whatis.php"
-											target="techno">PHP</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-sass"></i>
-										<a class="tag" href="https://sass-lang.com/" target="techno">SASS</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-solid fa-database"></i>
-										<a class="tag">SQL</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-js"></i>
-										<a class="tag" href="https://fr.wikipedia.org/wiki/JavaScript"
-											target="techno">Javascript</a></span>
-									<span class="text-nowrap">
-										<i class="fa-solid fa-terminal"></i>
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Bourne-Again_shell"
-											target="techno">Shell</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-rust"></i>
-										<a class="tag">RUST</a></span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>
-						<i class="fa fa-screwdriver-wrench fa-fw"></i>
-						Outils
-					</h5>
-					<table>
-						<tbody>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-solid fa-lock"></i>
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Secure_Shell"
-											target="techno">SSH</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag">Xdebug</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-git"></i>
-										<a class="tag" href="https://git-scm.com/" target="techno">GIT</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag" href="https://getcomposer.org/"
-											target="techno">Composer</a></span>
-									<span class="text-nowrap">
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Make"
-											target="techno">make</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Rsync"
-											target="techno">rsync</a></span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col col-sm-6">
-					<h5>
-						<i class="fa fa-code fa-fw"></i>
-						Frameworks
-					</h5>
-					<table>
-						<tbody>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-symfony"></i>
-										<a class="tag">Symfony</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag">Phpunit</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-python"></i>
-										<a class="tag" href="http://flask.pocoo.org/" target="techno">Flask</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-rust"></i>
-										<a class="tag" href="https://actix.rs/" target="techno">Actix</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-js"></i>
-										<a class="tag" href="https://jquery.com/" target="techno">Jquery</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-python"></i>
-										<a class="tag" href="https://palletsprojects.com/p/flask/"
-											target="techno">Click</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-python"></i>
-										<a class="tag" href="https://docs.pytest.org" target="techno">Pytest</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag" href="https://www.slimframework.com/"
-											target="techno">Slim</a></span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>
-						<i class="fa fa-server fa-fw"></i>
-						Services
-					</h5>
-					<table>
-						<tbody>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-docker"></i>
-										<a class="tag">Docker</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-php"></i>
-										<a class="tag">Blackfire</a></span>
-									<span class="text-nowrap">
-										<a class="tag">Redis</a></span>
-									<span class="text-nowrap">
-										<a class="tag">AMQP</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<a class="tag">Nginx</a></span>
-									<span class="text-nowrap">
-										<a class="tag" href="https://httpd.apache.org/"
-											target="techno">Apache</a></span>
-									<span class="text-nowrap">
-										<a class="tag" href="https://www.mysql.com/fr/" target="techno">MySQL</a></span>
-									<span class="text-nowrap">
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Cron"
-											target="techno">Cron</a></span>
-									<span class="text-nowrap">
-										<a class="tag">Circle-CI</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-algolia"></i>
-										<a class="tag" href=" " target="techno">Algolia</a></span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>
-						<i class="fa fa-save fa-fw"></i>
-						OS
-					</h5>
-					<table>
-						<tbody>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-										class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-linux"></i>
-										<a class="tag" href="https://fr.wikipedia.org/wiki/Linux"
-											target="techno">LINUX</a></span>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right text-nowrap">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-								</th>
-								<td>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-apple"></i>
-										<a class="tag">OSX</a></span>
-									<span class="text-nowrap">
-										<i class="fa-brands fa-windows"></i>
-										<a class="tag">Windows</a></span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<hr />
-
-			<div class="section">
-				<h3 class="text-uppercase">Expérience professionnelle</h3>
-				<h4>
-					<small>Depuis 2018</small><br />
-					Développeur Backend Senior<br /><small>@Wizaplace</small>
-				</h4>
-				<br />
-
-				<div class="row px-md-2">
-					<div class="col col-sm-6">
-						<ul>
-							<li>
-								Maintenance applicative au sein du RUN. Rôle transverse en étroite collaboration avec
-								l'INFRA et le support client.
-							</li>
-							<li>
-								Benchmarking / améliorations des performances de l'application.
-							</li>
-							<li>
-								Développement de features.
-							</li>
-						</ul>
-					</div>
-					<div class="col col-sm-6">
-						<ul>
-							<li>
-								Tooling / scripting.
-							</li>
-							<li>
-								Reprise de données / ETL.
-							</li>
-							<li>
-								Patch management / maj sécurité.
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="section">
-				<h4>
-					<small>2008 &mdash; 2018</small><br />
-					Développeur WEB <br /><small>@Hurleur média</small>
-				</h4>
-				<br />
-
-				<div class="row px-md-2">
-					<div class="col col-sm-6">
-						<h5>
-							<i class="fa fa-shopping-cart fa-fw"></i>
-							Développement et exploitation d'une plateforme d'<b>eCommerce</b>
-						</h5>
-						<ul>
-							<li>
-								<b>La Ribouldingue / Henry's France</b>
-								<a target="site" href="https://laribouldingue.com">www.laribouldingue.com</a>
-							</li>
-							<li>
-								<b>L'Éclat de Verre</b>
-							</li>
-							<li>
-								<b>Presses universitaires de Lyon</b>
-								…
-							</li>
-						</ul>
-						<br />
-					</div>
-
-					<div class="col col-xs-12 col-sm-6">
-						<h5>
-							<i class="fas fa-pencil-alt fa-fw"></i>
-							Développement et exploitation d'une plateforme <b>CMS</b>
-						</h5>
-						<ul>
-							<li>
-								<b>Grim Edif</b>
-							</li>
-							<li>
-								<a target="site"
-									href="http://www.academiedeversailles.com">www.academiedeversailles.com</a>
-							</li>
-							<li><a target="site" href="http://gerarduferas.com">www.gerarduferas.com</a> …</li>
-						</ul>
-						<br class="d-xs-block d-md-none" />
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<h5>
-							<i class="fa fa-server fa-fw"></i>
-							<b>Administration de serveurs Linux</b> dédiés et virtualisés
-						</h5>
-						<ul>
-							<li><b>Serveur HTTP</b> : Apache</li>
-							<li><b>DB</b> : MySQL</li>
-							<li><b>Monitoring</b> : Munin</li>
-							<li><b>Backups</b> : Automysql, Rsync, Cron, Unison …</li>
-						</ul>
-						<br class="d-xs-block d-md-none" />
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<h5>
-							<i class="fa fa-paint-brush fa-fw"></i>
-							Quelques tâches de créations graphiques
-						</h5>
-						<ul>
-							<li>Web design, UI</li>
-							<li>Logo, Charte graphique</li>
-							<li>Prépresse : PAO, flyers, affiches …</li>
-						</ul>
-						<br class="d-xs-block d-md-none" />
-					</div>
-				</div>
-			</div>
-
-			<div class="section">
-				<h4>
-					<small>2004 &mdash; 2008</small><br />
-					Développeur Flash/Actionscript <br /><small>@Indépendant</small>
-				</h4>
-
-				<div class="padded">
-					<ul>
-						<li>
-							Créations de site dynamique avec la plateforme Flash / ActionScript,
-						</li>
-						<li>
-							applications interactives,
-						</li>
-						<li>
-							animations algorithmiques, art génératif
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<br />
-	<script src="//code.jquery.com/jquery-3.3.0.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-	<script src="//kit.fontawesome.com/b7e6100e35.js"></script>
-</body>
-
+    <br />
+    <script src="//code.jquery.com/jquery-3.3.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="//kit.fontawesome.com/b7e6100e35.js"></script>
+  </body>
 </html>
