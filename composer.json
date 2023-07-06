@@ -5,7 +5,8 @@
         "scssphp/scssphp": "^1.10",
         "scssphp/server": "^1.10",
         "box/spout": "^3.3",
-        "guzzlehttp/guzzle": "^7.4"
+        "guzzlehttp/guzzle": "^7.4",
+        "cocur/slugify": "^4.3"
     },
     "autoload": {
         "psr-4": {

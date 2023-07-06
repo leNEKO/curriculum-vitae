@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Cv;
 
@@ -9,21 +11,16 @@ use ScssPhp\ScssPhp\Compiler;
  */
 class Html
 {
+	use SingletonTrait;
+
 	public $js;
 	public $css;
 	public Tpl $tpl;
-	private static $_instance = null;
 
 	private string $baseDir;
 
-	public static function getInstance(): self {
-		if(\is_null(self::$_instance)) {
-			self::$_instance = new Html();
-		}
-		return self::$_instance;
-	}
-
-	private function getBaseDir() {
+	private function getBaseDir()
+	{
 		return $this->baseDir ??= \dirname(__DIR__);
 	}
 
@@ -35,14 +32,14 @@ class Html
 			$this->getBaseDir() . '/assets.json'
 		);
 
-		foreach($data as $assets){
-			foreach($assets as $asset){
+		foreach ($data as $assets) {
+			foreach ($assets as $asset) {
 				$url = $asset->url;
 				$integrity = $asset->integrity ?? false;
 				$url_info = parse_url($url);
 				$path_info = pathinfo($url_info["path"]);
 				$extension = $path_info["extension"];
-				switch($extension){
+				switch ($extension) {
 					case "js":
 						$this->loadJs($url, $integrity);
 						break;
@@ -63,7 +60,7 @@ class Html
 			"integrity" => $integrity,
 			"has_integrity" => !!$integrity
 		];
-		$this->js[] = $this->tpl->render($this->getBaseDir() . "/tpl/html/script.mu",$js);
+		$this->js[] = $this->tpl->render($this->getBaseDir() . "/tpl/html/script.mu", $js);
 	}
 
 	private function loadCss($href, $integrity = null)
@@ -94,21 +91,22 @@ class Html
 
 		return $compiler
 			->compileString("@import '$path';")
-			->getCss()
-		;
+			->getCss();
 	}
 
-	public function render($tpl, $data = false){
+	public function render($tpl, $data = false)
+	{
 		return $this->tpl->render($tpl, $data);
 	}
 
-	public function page($content = null){
-		if(\is_array($content)){
+	public function page($content = null)
+	{
+		if (\is_array($content)) {
 			$content = \implode("\n", $content);
 		}
 		$data = [
-			"scripts" => \implode("\n",$this->js),
-			"stylesheets" => \implode("\n",$this->css),
+			"scripts" => \implode("\n", $this->js),
+			"stylesheets" => \implode("\n", $this->css),
 			"content" => $content
 		];
 		$html = $this->tpl->render(
