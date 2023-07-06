@@ -33,9 +33,11 @@ $info->dispo = $now->add(
    \DateInterval::createFromDateString($info->dispo_delay)
 )->format("F Y");
 
-\ob_start();
-include("$tplDir/comp.php");
-$comps = \ob_get_clean();
+
+/**
+ * @var ExperienceCollection
+ */
+$experiences = require("$dataDir/experiences.php");
 
 $content = [
    $html->render(
@@ -49,7 +51,10 @@ $content = [
             "$tplDir/info.mu",
             $info
          ),
-         "comps" => $comps,
+         "experiences" => $html->render(
+            "$tplDir/experiences.mu",
+            $experiences,
+         ),
          "url" => "https://docs.google.com/spreadsheets/d/10NMp5EHkIQexaXeaxUbqfIkLK0pt6yrQPe9IZwujdhQ/edit#gid=0"
       ]
    )
