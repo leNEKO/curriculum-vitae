@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <title></title>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-118003449-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-118003449-1");
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato");
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato";
+      }
+      body {
+        background-color: #fff;
+        color: #000;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+      hr {
+        border-color: black;
+        border-bottom: 1px;
+        margin: 15px -15px 25px -15px;
+      }
+      h4 {
+        margin-top: 15px;
+        border-left: 4px solid #000;
+        padding: 0 0 0 15px;
+        line-height: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: #ccc;
+      }
+      a:hover {
+        color: inherit;
+        text-decoration-color: #000;
+      }
+      .section {
+        page-break-inside: avoid;
+      }
+      .padded {
+        margin: 0 30px;
+      }
+      @media print {
+        a {
+          text-decoration: none !important;
+        }
+        .noprint {
+          display: none;
+        }
+        .container {
+          display: table;
+        }
+      }
+      .stack {
+        padding-left: 1em;
+      }
+      .stack li {
+        display: inline;
+        white-space: nowrap;
+        margin-right: 4px;
+      }
+      .stack li:after {
+        content: ",  ";
+      }
+      .stack li:last-child:after {
+        content: "";
+      }
+      @page {
+        size: A4 portrait;
+      }
+      @media screen {
+        .noscreen {
+          display: none;
+        }
+      }
+      #bonus {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br class="noprint" />
+    <div class="container">
+      <div id="header">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <address>
+              <h5>
+                Nicolas Masson
+              </h5>
+
+              <div>
+                <!-- 310, rue des Magnolias Grandiflora<br/> -->
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                <a
+                  href="https://www.google.fr/maps/place/Trévoux"
+                  target="map"
+                  class="text-uppercase"
+                >
+                  01600 Trévoux
+                </a>
+              </div>
+
+              <div>
+                <i class="fas fa-fw fa-envelope"></i>
+                <a href="mailto:le.neko@gmail.com">le.neko@gmail.com</a>
+              </div>
+
+              <div>
+                <div>
+                  <i class="fab fa-fw fa-github-alt"></i>
+                  <small
+                    ><a href="https://github.com/leNEKO"
+                      >https://github.com/leNEKO</a
+                    ></small
+                  >
+                </div>
+                <div class="noscreen">
+                  <br />
+                  <small
+                    ><a href="https://leneko.github.io/"
+                      >https://leneko.github.io/</a
+                    >
+                    <i class="fas fa-arrow-left"></i> ce CV à jour</small
+                  >
+                </div>
+              </div>
+            </address>
+          </div>
+          <div class="col-xs-12 col-sm-6 d-xs-block d-sm-none">
+            <br />
+            <h5>Développeur WEB</h5>
+
+            <div>
+              <i class="fa fa-clock"></i>
+              <b>Disponibilité</b><br />
+              ~ September 2023
+            </div>
+
+            <div>
+              <i class="fas fa-hourglass-half"></i>
+              <b>Années d'expériences</b><br />
+              19 ans
+            </div>
+
+            <div>
+              <i class="fa fa-map"></i>
+              <b>Mobilité géographique</b><br />
+              Région de Lyon<br />
+              <small>
+                <em>(Je n'ai pas le permis)</em>
+              </small>
+            </div>
+          </div>
+          <div class="col-sm-6 text-right d-none d-sm-block">
+            <h5>Développeur WEB</h5>
+
+            <div>
+              <i class="fa fa-clock"></i>
+              <b>Disponibilité</b><br />
+              ~ September 2023
+            </div>
+
+            <div>
+              <i class="fas fa-hourglass-half"></i>
+              <b>Années d'expériences</b><br />
+              19 ans
+            </div>
+
+            <div>
+              <i class="fa fa-map"></i>
+              <b>Mobilité géographique</b><br />
+              Région de Lyon<br />
+              <small>
+                <em>(Je n'ai pas le permis)</em>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="cv">
+        <div class="row">
+          <div class="col-xs-6 col-sm-4">
+            <h3 class="text-uppercase">Formation</h3>
+            <h4>
+              <small>
+                Autodidacte
+                <small><em>(niveau BAC)</em></small>
+              </small>
+            </h4>
+          </div>
+          <div class="col-xs-6 col-sm-8">
+            <br class="d-sm-none" />
+            <h3 class="text-uppercase">Langues</h3>
+            <h4>
+              <small>
+                Français, Anglais <small><em>(niveau B2)</em></small>
+              </small>
+            </h4>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3 class="text-uppercase">Expérience professionnelle</h3>
+
+        <div class="section">
+          <div class="row">
+            <div class="col">
+              <h4>
+                <small>2022 - 2023</small><br />
+                Tech Lead<br />
+                <small>@Marjory</small>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12">
+              <ul class="stack">
+                <li>
+                  <i class="fa-fw fa-brands fa-js"></i>
+                  <a href="https://www.serverless.com/" target="info"
+                    >Serverless</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-js"></i>
+                  <a href="https://symfony.com/" target="info">Jest</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-js"></i>
+                  <a href="https://www.typescriptlang.org/" target="info"
+                    >Typescript</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-python"></i>
+                  <a href="https://www.python.org/" target="info">PYTHON</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-rust"></i>
+                  <a href="https://www.rust-lang.org/fr" target="info">RUST</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-node-js"></i>
+                  <a href="https://nodejs.org" target="info">NodeJS</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-aws"></i>
+                  <a href="https://aws.amazon.com/fr/dynamodb" target="info"
+                    >DynamoDB</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-gitlab"></i>
+                  <a href="https://about.gitlab.com/" target="info">gitlab</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-algolia"></i>
+                  <a href=" " target="info">Algolia</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-docker"></i>
+                  <a href="https://www.docker.com/" target="info">Docker</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-git"></i>
+                  <a href="https://git-scm.com/" target="info">GIT</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-terminal"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Bourne-Again_shell"
+                    target="info"
+                    >Shell</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-linux"></i>
+                  <a href="https://fr.wikipedia.org/wiki/Linux" target="info"
+                    >LINUX</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-aws"></i>
+                  AWS
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <ul>
+              <li>Développement microservice serverless</li>
+              <li>Gestion déploiement release, CI/CD</li>
+              <li>Maintenance, gestion incidents</li>
+              <li>Tooling / scripting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="row">
+            <div class="col">
+              <h4>
+                <small>2018 - 2022</small><br />
+                Développeur Backend Senior<br />
+                <small>@Wizaplace</small>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12">
+              <ul class="stack">
+                <li>
+                  <i class="fa-fw fa-brands fa-symfony"></i>
+                  <a href="https://symfony.com/" target="info">Symfony</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-php"></i>
+                  <a href="https://phpunit.de/" target="info">Phpunit</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-php"></i>
+                  <a
+                    href="http://php.net/manual/fr/intro-whatis.php"
+                    target="info"
+                    >PHP</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-python"></i>
+                  <a href="https://www.python.org/" target="info">PYTHON</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-database"></i>
+                  <a href="https://www.mysql.com/fr/" target="info">MySQL</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-database"></i>
+                  <a href="https://redis.io/" target="info">Redis</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-aws"></i>
+                  <a href="https://aws.amazon.com/fr/sqs" target="info">SQS</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-server"></i>
+                  Nginx
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-server"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol"
+                    target="info"
+                    >AMQP</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-docker"></i>
+                  <a href="https://www.docker.com/" target="info">Docker</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-php"></i>
+                  <a href="https://www.blackfire.io/php/" target="info"
+                    >Blackfire</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-algolia"></i>
+                  <a href=" " target="info">Algolia</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-git"></i>
+                  <a href="https://git-scm.com/" target="info">GIT</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-terminal"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Bourne-Again_shell"
+                    target="info"
+                    >Shell</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-linux"></i>
+                  <a href="https://fr.wikipedia.org/wiki/Linux" target="info"
+                    >LINUX</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-aws"></i>
+                  AWS
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <ul>
+              <li>Maintenance applicative</li>
+              <li>
+                Benchmarking / améliorations des performances de l'application.
+              </li>
+              <li>Développement de features</li>
+              <li>Tooling / scripting</li>
+              <li>Reprise de données / ETL</li>
+              <li>Patch management / maj sécurité</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="row">
+            <div class="col">
+              <h4>
+                <small>2008 - 2018</small><br />
+                Développeur Fullstack<br />
+                <small>@Hurleur Média</small>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12">
+              <ul class="stack">
+                <li>
+                  <i class="fa-fw fa-brands fa-php"></i>
+                  <a
+                    href="http://php.net/manual/fr/intro-whatis.php"
+                    target="info"
+                    >PHP</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-database"></i>
+                  <a href="https://www.mysql.com/fr/" target="info">MySQL</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-server"></i>
+                  <a href="https://httpd.apache.org/" target="info">Apache</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-terminal"></i>
+                  <a
+                    href="https://www.cis.upenn.edu/~bcpierce/unison/"
+                    target="info"
+                    >unison</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-terminal"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Bourne-Again_shell"
+                    target="info"
+                    >Shell</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-linux"></i>
+                  <a href="https://fr.wikipedia.org/wiki/Linux" target="info"
+                    >LINUX</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <ul>
+              <li>
+                Conception, développement, déploiement, intégration d'une
+                plateforme d'eCommerce
+              </li>
+              <li>
+                Conception, développement, déploiement, intégration d'une
+                plateforme CMS
+              </li>
+              <li>Administration de serveurs Linux dédiés et virtualisés</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="row">
+            <div class="col">
+              <h4>
+                <small>2004 - 2008</small><br />
+                Développeur Flash/Actionscript<br />
+                <small>@Indépendant</small>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12">
+              <ul class="stack">
+                <li>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/ActionScript"
+                    target="info"
+                    >Actionscript</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-php"></i>
+                  <a
+                    href="http://php.net/manual/fr/intro-whatis.php"
+                    target="info"
+                    >PHP</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-database"></i>
+                  <a href="https://www.mysql.com/fr/" target="info">MySQL</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-solid fa-server"></i>
+                  <a href="https://httpd.apache.org/" target="info">Apache</a>
+                </li>
+                <li>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Adobe_Flash"
+                    target="info"
+                    >Flash</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <ul>
+              <li>
+                Créations de site dynamique avec la plateforme Flash /
+                ActionScript
+              </li>
+              <li>Applications interactives multimédia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://kit.fontawesome.com/b7e6100e35.js"></script>
+
+    <div id="bonus" class="noscreen">
+      <div>
+        J'
+        <i class="fa-solid fa-heart fa-fw"></i>
+        <i class="fa-brands fa-rust fa-fw"></i>
+        &amp;
+        <i class="fa-brands fa-python fa-fw"></i>
+      </div>
+    </div>
+  </body>
+</html>
