@@ -18,31 +18,44 @@
 	<br />
 
 	<div class="cv">
+		{{#data.education}}
 		<div class="row">
 			<div class="col-xs-6 col-sm-4">
 				<h3 class="text-uppercase">Formation</h3>
 				<h4>
 					<small>
-						Autodidacte
-						<small><em>(niveau BAC)</em></small>
+						<ul class="stack">
+							{{#formations}}
+							<li>
+								{{title}}
+								{{#comment}}<small><em>({{comment}})</em></small>{{/comment}}
+							</li>
+							{{/formations}}
+						</ul>
 					</small>
 				</h4>
 			</div>
-			<div class="col-xs-6 col-sm-8">
+			<div class=" col-xs-6 col-sm-8">
 				<br class="d-sm-none" />
 				<h3 class="text-uppercase">Langues</h3>
 				<h4>
 					<small>
-						Français, Anglais <small><em>(niveau B2)</em></small>
+						<ul class="stack">
+							{{#languages}}
+							<li>
+								{{title}}
+								{{#comment}}<small><em>({{comment}})</em></small>{{/comment}}
+							</li>
+							{{/languages}}
+						</ul>
 					</small>
 				</h4>
 			</div>
 		</div>
+		{{/data.education}}
 
 		<hr />
-
 		{{{experiences}}}
-
 	</div>
 </div>
 

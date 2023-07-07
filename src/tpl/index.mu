@@ -25,12 +25,7 @@
 
 	<div id="bonus" class="noscreen">
 		<div>
-
-			J'
-			<i class="fa-solid fa-heart fa-fw"></i>
-			<i class="fa-brands fa-rust fa-fw"></i>
-			&amp;
-			<i class="fa-brands fa-python fa-fw"></i>
+			J'<i class="fa-solid fa-heart"></i><i class="fa-brands fa-rust"></i>&amp;<i class="fa-brands fa-python"></i>
 		</div>
 	</div>
 </body>

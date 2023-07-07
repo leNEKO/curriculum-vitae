@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=schema.json
+contact:
+  title: Développeur Backend
+  firstname: Nicolas
+  lastname: Masson
+  birthday: 1977-10-08
+  carreerStart: 2014-01-01
+  isDispo: true
+  dispoDelay: P2M
+  email: le.neko@gmail.com
+  url: https://leneko.github.io/
+  github: https://github.com/leNEKO
+  tel: 07 83 53 44 30,
+  address:
+    gmap: https://www.google.fr/maps/place/Trévoux
+    street: 310, rue des Magnolias Grandiflora
+    cp: '01600'
+    city: Trévoux
+education:
+  formations:
+    - title: Autodidacte
+      comment: niveau BAC
+  languages:
+    - title: Français
+    - title: Anglais
+      comment: niveau B2
