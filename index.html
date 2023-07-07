@@ -86,7 +86,7 @@
         }
       }
       .stack {
-        padding-left: 1em;
+        padding-left: 0;
       }
       .stack li {
         display: inline;
@@ -99,8 +99,17 @@
       .stack li:last-child:after {
         content: "";
       }
+      .spaced {
+        padding-left: 15px;
+      }
+      #header {
+        position: running(pageHeader);
+      }
       @page {
         size: A4 portrait;
+        @top-center {
+          content: element(pageHeader);
+        }
       }
       @media screen {
         .noscreen {
@@ -111,7 +120,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        font-size: 24px;
+        font-size: 20px;
       }
     </style>
   </head>
@@ -128,7 +137,6 @@
               </h5>
 
               <div>
-                <!-- 310, rue des Magnolias Grandiflora<br/> -->
                 <i class="fas fa-map-marker-alt fa-fw"></i>
                 <a
                   href="https://www.google.fr/maps/place/Trévoux"
@@ -155,19 +163,19 @@
                 </div>
                 <div class="noscreen">
                   <br />
-                  <small
-                    ><a href="https://leneko.github.io/"
+                  <small>
+                    <a href="https://leneko.github.io/"
                       >https://leneko.github.io/</a
                     >
-                    <i class="fas fa-arrow-left"></i> ce CV à jour</small
-                  >
+                    <i class="fas fa-arrow-left"></i> ce CV à jour
+                  </small>
                 </div>
               </div>
             </address>
           </div>
           <div class="col-xs-12 col-sm-6 d-xs-block d-sm-none">
             <br />
-            <h5>Développeur WEB</h5>
+            <h5>Développeur Backend</h5>
 
             <div>
               <i class="fa fa-clock"></i>
@@ -191,7 +199,7 @@
             </div>
           </div>
           <div class="col-sm-6 text-right d-none d-sm-block">
-            <h5>Développeur WEB</h5>
+            <h5>Développeur Backend</h5>
 
             <div>
               <i class="fa fa-clock"></i>
@@ -225,24 +233,35 @@
             <h3 class="text-uppercase">Formation</h3>
             <h4>
               <small>
-                Autodidacte
-                <small><em>(niveau BAC)</em></small>
+                <ul class="stack">
+                  <li>
+                    Autodidacte
+                    <small><em>(niveau BAC)</em></small>
+                  </li>
+                </ul>
               </small>
             </h4>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class=" col-xs-6 col-sm-8">
             <br class="d-sm-none" />
             <h3 class="text-uppercase">Langues</h3>
             <h4>
               <small>
-                Français, Anglais <small><em>(niveau B2)</em></small>
+                <ul class="stack">
+                  <li>
+                    Français
+                  </li>
+                  <li>
+                    Anglais
+                    <small><em>(niveau B2)</em></small>
+                  </li>
+                </ul>
               </small>
             </h4>
           </div>
         </div>
 
         <hr />
-
         <h3 class="text-uppercase">Expérience professionnelle</h3>
 
         <div class="section">
@@ -257,7 +276,7 @@
           </div>
           <div class="row">
             <div class="col col-xs-12">
-              <ul class="stack">
+              <ul class="stack spaced">
                 <li>
                   <i class="fa-fw fa-brands fa-js"></i>
                   <a href="https://www.serverless.com/" target="info"
@@ -298,7 +317,9 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-algolia"></i>
-                  <a href=" " target="info">Algolia</a>
+                  <a href="https://www.algolia.com/fr/" target="info"
+                    >Algolia</a
+                  >
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-docker"></i>
@@ -350,7 +371,7 @@
           </div>
           <div class="row">
             <div class="col col-xs-12">
-              <ul class="stack">
+              <ul class="stack spaced">
                 <li>
                   <i class="fa-fw fa-brands fa-symfony"></i>
                   <a href="https://symfony.com/" target="info">Symfony</a>
@@ -407,7 +428,9 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-algolia"></i>
-                  <a href=" " target="info">Algolia</a>
+                  <a href="https://www.algolia.com/fr/" target="info"
+                    >Algolia</a
+                  >
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-git"></i>
@@ -459,7 +482,7 @@
           </div>
           <div class="row">
             <div class="col col-xs-12">
-              <ul class="stack">
+              <ul class="stack spaced">
                 <li>
                   <i class="fa-fw fa-brands fa-php"></i>
                   <a
@@ -527,7 +550,7 @@
           </div>
           <div class="row">
             <div class="col col-xs-12">
-              <ul class="stack">
+              <ul class="stack spaced">
                 <li>
                   <a
                     href="https://fr.wikipedia.org/wiki/ActionScript"
@@ -583,11 +606,10 @@
 
     <div id="bonus" class="noscreen">
       <div>
-        J'
-        <i class="fa-solid fa-heart fa-fw"></i>
-        <i class="fa-brands fa-rust fa-fw"></i>
-        &amp;
-        <i class="fa-brands fa-python fa-fw"></i>
+        J'<i class="fa-solid fa-heart"></i
+        ><i class="fa-brands fa-rust"></i>&amp;<i
+          class="fa-brands fa-python"
+        ></i>
       </div>
     </div>
   </body>
