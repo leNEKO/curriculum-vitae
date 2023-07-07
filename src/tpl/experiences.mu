@@ -14,7 +14,7 @@
     {{#stackCollection}}
     <div class="row">
         <div class="col col-xs-12">
-            <ul class="stack">
+            <ul class="stack spaced">
                 {{#competences}}
                 <li>
                     {{#icons}}<i class="fa-fw {{icons}}"></i>{{/icons}}

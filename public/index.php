@@ -12,25 +12,26 @@ $dataDir = "$baseDir/data";
 
 require  "$baseDir/vendor/autoload.php";
 
-use App\Cv\Helper;
+
 use App\Cv\Html;
+use Symfony\Component\Yaml\Yaml;
 
 $html = new Html();
 
 $now = new \DateTimeImmutable();
 
-$info = Helper::jsonRead("$dataDir/info.json");
-$info->age = $now->diff(
-   new \DateTimeImmutable($info->birthday)
+$info = Yaml::parseFile("$dataDir/info.yml");
+
+$info['contact']['age'] = $now->diff(
+   new \DateTimeImmutable('@' . $info['contact']['birthday'])
 )->y;
 
-$info->elapsed = $now->diff(
+$info['contact']['elapsed'] = $now->diff(
    new \DateTimeImmutable('2004-01-01')
-)
-   ->y;
+)->y;
 
-$info->dispo = $now->add(
-   \DateInterval::createFromDateString($info->dispo_delay)
+$info['contact']['dispo'] = $now->add(
+   new \DateInterval($info['contact']['dispoDelay'])
 )->format("F Y");
 
 
@@ -45,17 +46,18 @@ $content = [
       [
          "adresse" => $html->render(
             "$tplDir/adresse.mu",
-            $info
+            $info['contact']
          ),
          "info" => $html->render(
             "$tplDir/info.mu",
-            $info
+            $info['contact']
          ),
          "experiences" => $html->render(
             "$tplDir/experiences.mu",
             $experiences,
          ),
-         "url" => "https://docs.google.com/spreadsheets/d/10NMp5EHkIQexaXeaxUbqfIkLK0pt6yrQPe9IZwujdhQ/edit#gid=0"
+         "url" => "https://docs.google.com/spreadsheets/d/10NMp5EHkIQexaXeaxUbqfIkLK0pt6yrQPe9IZwujdhQ/edit#gid=0",
+         "data" => $info
       ]
    )
 ];

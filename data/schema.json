@@ -1,0 +1,129 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/leNEKO/leNEKO.github.io/blob/master/data/cv.schema.json",
+    "title": "Curiculum Vitae",
+    "description": "Tout est dans le titre",
+    "type": "object",
+    "properties": {
+        "contact": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "examples": [
+                        "Developper"
+                    ]
+                },
+                "firstname": {
+                    "type": "string",
+                    "examples": [
+                        "Nicolas"
+                    ]
+                },
+                "lastname": {
+                    "type": "string",
+                    "examples": [
+                        "Masson"
+                    ]
+                },
+                "birthday": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "carreerStart": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "isDispo": {
+                    "type": "boolean"
+                },
+                "dispoDelay": {
+                    "$comment": "duration in month",
+                    "type": "string",
+                    "format": "duration"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "github": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "tel": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "gmap": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "street": {
+                            "type": "string"
+                        },
+                        "cp": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "street",
+                        "cp",
+                        "city"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "education": {
+            "type": "object",
+            "properties": {
+                "formations": {
+                    "$ref": "#/definitions/generic_entry"
+                },
+                "languages": {
+                    "$ref": "#/definitions/generic_entry"
+                }
+            },
+            "required": [
+                "formations",
+                "languages"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "contact",
+        "education"
+    ],
+    "definitions": {
+        "generic_entry": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "comment": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "title"
+                ],
+                "additionalProperties": false
+            }
+        }
+    }
+}

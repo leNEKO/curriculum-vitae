@@ -72,7 +72,7 @@ a {
 }
 
 .stack {
-    padding-left: 1em;
+    padding-left: 0;
 
     li {
         display: inline;
@@ -91,17 +91,21 @@ a {
 
 }
 
-// #header {
-//     position: running(pageHeader);
-// }
+.spaced {
+    padding-left: 15px;
+}
+
+
+#header {
+    position: running(pageHeader);
+}
 
 @page {
     size: A4 portrait;
-    // margin: 0.5in 0.25in;
 
-    // @top-center {
-    //     content: element(pageHeader);
-    // }
+    @top-center {
+        content: element(pageHeader);
+    }
 }
 
 
@@ -115,5 +119,5 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 24px
+    font-size: 20px
 }

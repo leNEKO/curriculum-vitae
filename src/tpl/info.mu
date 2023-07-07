@@ -1,23 +1,23 @@
 <h5>{{title}}</h5>
 
-{{#is_dispo}}
+{{#isDispo}}
 <div>
 	<i class="fa fa-clock"></i>
-	<b>Disponibilité</b><br/>
+	<b>Disponibilité</b><br />
 	~ {{dispo}}
 </div>
-{{/is_dispo}}
+{{/isDispo}}
 
 <div>
 	<i class="fas fa-hourglass-half"></i>
-	<b>Années d'expériences</b><br/>
+	<b>Années d'expériences</b><br />
 	{{elapsed}} ans
 </div>
 
 <div>
 	<i class="fa fa-map"></i>
-	<b>Mobilité géographique</b><br/>
-	Région de Lyon<br/>
+	<b>Mobilité géographique</b><br />
+	Région de Lyon<br />
 	<small>
 		<em>(Je n'ai pas le permis)</em>
 	</small>
