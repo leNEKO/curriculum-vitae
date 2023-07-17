@@ -14,5 +14,5 @@ script = [
 script = [
   'touch /tmp/cv.html',
   'xdg-open /tmp/cv.html',
-  'cargo watch -s "cargo make index"'
+  'cargo watch -w src -w data -s "cargo make index"'
 ]
