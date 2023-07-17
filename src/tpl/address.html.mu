@@ -25,7 +25,7 @@
 		<div class="noscreen">
 			<br />
 			<small>
-				<a href="{{url}}">{{url}}</a>
+				<a href="{{website}}">{{website}}</a>
 				<i class="fas fa-arrow-left"></i> ce CV à jour
 			</small>
 		</div>

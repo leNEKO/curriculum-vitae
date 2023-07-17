@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <title></title>
 
@@ -30,6 +30,36 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
+    <script
+      defer
+      async
+      src="https://code.jquery.com/jquery-3.3.0.min.js"
+    ></script>
+
+    <script
+      defer
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    ></script>
+
+    <script
+      defer
+      async
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    ></script>
+
+    <script
+      defer
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"
+    ></script>
+
+    <script
+      defer
+      async
+      src="https://kit.fontawesome.com/b7e6100e35.js"
+    ></script>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato");
       h1,
@@ -40,40 +70,48 @@
       h6 {
         font-family: "Lato";
       }
+
       body {
         background-color: #fff;
         color: #000;
       }
+
       h3 {
         font-size: 22px;
         margin-bottom: 0;
       }
+
       hr {
         border-color: black;
         border-bottom: 1px;
         margin: 15px -15px 25px -15px;
       }
+
       h4 {
         margin-top: 15px;
         border-left: 4px solid #000;
         padding: 0 0 0 15px;
         line-height: 100%;
       }
+
       a {
         color: inherit;
         text-decoration: underline;
-        text-decoration-color: #ccc;
+        text-decoration-color: #cccccc;
       }
       a:hover {
         color: inherit;
         text-decoration-color: #000;
       }
+
       .section {
         page-break-inside: avoid;
       }
+
       .padded {
         margin: 0 30px;
       }
+
       @media print {
         a {
           text-decoration: none !important;
@@ -99,12 +137,15 @@
       .stack li:last-child:after {
         content: "";
       }
+
       .spaced {
         padding-left: 15px;
       }
+
       #header {
         position: running(pageHeader);
       }
+
       @page {
         size: A4 portrait;
         @top-center {
@@ -132,14 +173,12 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <address>
-              <h5>
-                Nicolas Masson
-              </h5>
+              <h5>Nicolas Masson</h5>
 
               <div>
                 <i class="fas fa-map-marker-alt fa-fw"></i>
                 <a
-                  href="https://www.google.fr/maps/place/Trévoux"
+                  href="https://www.google.fr/maps/place/Tr%C3%A9voux"
                   target="map"
                   class="text-uppercase"
                 >
@@ -224,7 +263,6 @@
           </div>
         </div>
       </div>
-
       <br />
 
       <div class="cv">
@@ -242,15 +280,13 @@
               </small>
             </h4>
           </div>
-          <div class=" col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8">
             <br class="d-sm-none" />
             <h3 class="text-uppercase">Langues</h3>
             <h4>
               <small>
                 <ul class="stack">
-                  <li>
-                    Français
-                  </li>
+                  <li>Français</li>
                   <li>
                     Anglais
                     <small><em>(niveau B2)</em></small>
@@ -303,7 +339,7 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-node-js"></i>
-                  <a href="https://nodejs.org" target="info">NodeJS</a>
+                  <a href="https://nodejs.org/" target="info">NodeJS</a>
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-aws"></i>
@@ -345,6 +381,7 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-aws"></i>
+
                   AWS
                 </li>
               </ul>
@@ -364,7 +401,7 @@
             <div class="col">
               <h4>
                 <small>2018 - 2022</small><br />
-                Développeur Backend Senior<br />
+                Développeur Backend<br />
                 <small>@Wizaplace</small>
               </h4>
             </div>
@@ -406,6 +443,7 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-solid fa-server"></i>
+
                   Nginx
                 </li>
                 <li>
@@ -452,6 +490,7 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-brands fa-aws"></i>
+
                   AWS
                 </li>
               </ul>
@@ -461,7 +500,8 @@
             <ul>
               <li>Maintenance applicative</li>
               <li>
-                Benchmarking / améliorations des performances de l'application.
+                Benchmarking / améliorations des performances de
+                l&#39;application
               </li>
               <li>Développement de features</li>
               <li>Tooling / scripting</li>
@@ -492,6 +532,36 @@
                   >
                 </li>
                 <li>
+                  <i class="fa-fw fa-brands fa-js"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/JavaScript"
+                    target="info"
+                    >Javascript</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-html5"></i>
+                  <a href="https://fr.wikipedia.org/wiki/HTML5" target="info"
+                    >HTML</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-css3"></i>
+                  <a
+                    href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"
+                    target="info"
+                    >CSS</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-sass"></i>
+                  <a href="https://sass-lang.com/" target="info">SASS</a>
+                </li>
+                <li>
+                  <i class="fa-fw fa-brands fa-js"></i>
+                  <a href="https://jquery.com/" target="info">Jquery</a>
+                </li>
+                <li>
                   <i class="fa-fw fa-solid fa-database"></i>
                   <a href="https://www.mysql.com/fr/" target="info">MySQL</a>
                 </li>
@@ -501,9 +571,7 @@
                 </li>
                 <li>
                   <i class="fa-fw fa-solid fa-terminal"></i>
-                  <a
-                    href="https://www.cis.upenn.edu/~bcpierce/unison/"
-                    target="info"
+                  <a href="https://github.com/bcpierce00/unison" target="info"
                     >unison</a
                   >
                 </li>
@@ -527,11 +595,11 @@
           <div class="row">
             <ul>
               <li>
-                Conception, développement, déploiement, intégration d'une
-                plateforme d'eCommerce
+                Conception, développement, déploiement, intégration d&#39;une
+                plateforme d&#39;eCommerce
               </li>
               <li>
-                Conception, développement, déploiement, intégration d'une
+                Conception, développement, déploiement, intégration d&#39;une
                 plateforme CMS
               </li>
               <li>Administration de serveurs Linux dédiés et virtualisés</li>
@@ -543,7 +611,7 @@
             <div class="col">
               <h4>
                 <small>2004 - 2008</small><br />
-                Développeur Flash/Actionscript<br />
+                Développeur Flash/ActionScript<br />
                 <small>@Indépendant</small>
               </h4>
             </div>
@@ -587,8 +655,7 @@
           <div class="row">
             <ul>
               <li>
-                Créations de site dynamique avec la plateforme Flash /
-                ActionScript
+                Créations de site dynamique avec la platforme Flash/ActionScript
               </li>
               <li>Applications interactives multimédia</li>
             </ul>
@@ -598,18 +665,13 @@
     </div>
 
     <br />
-    <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="https://kit.fontawesome.com/b7e6100e35.js"></script>
 
     <div id="bonus" class="noscreen">
       <div>
-        J'<i class="fa-solid fa-heart"></i
-        ><i class="fa-brands fa-rust"></i>&amp;<i
-          class="fa-brands fa-python"
-        ></i>
+        J'<i class="fa-solid fa-heart"></i>
+        <i class="fa-brands fa-rust"></i>
+        &amp;
+        <i class="fa-brands fa-python"></i>
       </div>
     </div>
   </body>

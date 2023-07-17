@@ -1,0 +1,342 @@
+# yaml-language-server: $schema=technos.schema.json
+make:
+  name: make
+  link: https://fr.wikipedia.org/wiki/Make
+  techno_type: CLI
+markdown:
+  name: Markdown
+  icon: fa-brands fa-markdown
+  techno_type: FORMAT
+  link: https://fr.wikipedia.org/wiki/Markdown
+click:
+  name: Click
+  icon: fa-brands fa-python
+  techno_type: FRAMEWORK
+  link: https://palletsprojects.com/p/flask/
+javascript:
+  name: Javascript
+  icon: fa-brands fa-js
+  techno_type: CODE
+  link: https://fr.wikipedia.org/wiki/JavaScript
+git:
+  name: GIT
+  icon: fa-brands fa-git
+  techno_type: CLI
+  link: https://git-scm.com/
+mangopay:
+  name: Mangopay
+  techno_type: API
+json:
+  name: JSON
+  icon: https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg
+  techno_type: FORMAT
+  link: https://www.json.org/json-fr.html
+inkscape:
+  name: Inkscape
+  techno_type: SOFT
+  link: https://inkscape.org/fr/
+xdebug:
+  name: Xdebug
+  icon: fa-brands fa-php
+  techno_type: CLI
+reaper:
+  name: Reaper
+  techno_type: SOFT
+  link: https://www.reaper.fm/
+actionscript:
+  name: Actionscript
+  techno_type: CODE
+  link: https://fr.wikipedia.org/wiki/ActionScript
+suite-adobe:
+  name: Suite Adobe
+  techno_type: SOFT
+  link: https://www.adobe.com/
+mysql:
+  name: MySQL
+  icon: fa-solid fa-database
+  techno_type: SERVICE
+  link: https://www.mysql.com/fr/
+google-map-api:
+  name: Google map API
+  techno_type: API
+  link: https://developers.google.com/maps/?hl=fr
+bower:
+  name: Bower
+  techno_type: CLI
+  link: https://bower.io/
+css:
+  name: CSS
+  icon: fa-brands fa-css3
+  techno_type: CODE
+  link: https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade
+sass:
+  name: SASS
+  icon: fa-brands fa-sass
+  techno_type: CODE
+  link: https://sass-lang.com/
+monetico:
+  name: Monetico
+  techno_type: API
+  link: https://www.monetico-paiement.fr/
+java:
+  name: JAVA
+  techno_type: CODE
+  link: https://www.java.com/fr/
+ruby:
+  name: Ruby
+  techno_type: CODE
+shell:
+  name: Shell
+  icon: fa-solid fa-terminal
+  techno_type: CODE
+  link: https://fr.wikipedia.org/wiki/Bourne-Again_shell
+algolia:
+  name: Algolia
+  icon: fa-brands fa-algolia
+  techno_type: SERVICE
+  link: https://www.algolia.com/fr/
+html:
+  name: HTML
+  icon: fa-brands fa-html5
+  techno_type: FORMAT
+  link: https://fr.wikipedia.org/wiki/HTML5
+jest:
+  name: Jest
+  icon: fa-brands fa-js
+  techno_type: FRAMEWORK
+  link: https://symfony.com/
+composer:
+  name: Composer
+  icon: fa-brands fa-php
+  techno_type: CLI
+  link: https://getcomposer.org/
+gimp:
+  name: Gimp
+  techno_type: SOFT
+  link: https://www.gimp.org/fr/
+go:
+  name: GO
+  techno_type: CODE
+paypal:
+  name: PAYPAL
+  techno_type: API
+  link: https://www.paypal.com/fr/home
+sqs:
+  name: SQS
+  icon: fa-brands fa-aws
+  techno_type: SERVICE
+  link: https://aws.amazon.com/fr/sqs
+bitwig-studio:
+  name: Bitwig Studio
+  techno_type: SOFT
+docker:
+  name: Docker
+  icon: fa-brands fa-docker
+  techno_type: SERVICE
+  link: https://www.docker.com/
+cron:
+  name: Cron
+  techno_type: SERVICE
+  link: https://fr.wikipedia.org/wiki/Cron
+c:
+  name: C
+  techno_type: CODE
+  link: https://fr.wikipedia.org/wiki/C%2B%2B
+nginx:
+  name: Nginx
+  icon: fa-solid fa-server
+  techno_type: SERVICE
+symfony:
+  name: Symfony
+  icon: fa-brands fa-symfony
+  techno_type: FRAMEWORK
+  link: https://symfony.com/
+mailchimp:
+  name: Mailchimp
+  techno_type: API
+  link: https://www.mandrill.com/
+atos:
+  name: ATOS
+  icon: ' '
+  techno_type: API
+  link: https://atos.net/fr/
+oembed:
+  name: oEmbed
+  techno_type: FORMAT
+  link: https://oembed.com/
+nodejs:
+  name: NodeJS
+  icon: fa-brands fa-node-js
+  techno_type: SERVICE
+  link: https://nodejs.org/
+serverless:
+  name: Serverless
+  icon: fa-brands fa-js
+  techno_type: FRAMEWORK
+  link: https://www.serverless.com/
+opengraph:
+  name: OPENGRAPH
+  techno_type: FORMAT
+  link: http://ogp.me/
+gitlab:
+  name: gitlab
+  icon: fa-brands fa-gitlab
+  techno_type: SERVICE
+  link: https://about.gitlab.com/
+php:
+  name: PHP
+  icon: fa-brands fa-php
+  techno_type: CODE
+  link: http://php.net/manual/fr/intro-whatis.php
+amqp:
+  name: AMQP
+  icon: fa-solid fa-server
+  techno_type: SERVICE
+  link: https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol
+blackfire:
+  name: Blackfire
+  icon: fa-brands fa-php
+  techno_type: SERVICE
+  link: https://www.blackfire.io/php/
+phpunit:
+  name: Phpunit
+  icon: fa-brands fa-php
+  techno_type: FRAMEWORK
+  link: https://phpunit.de/
+google-sheet-api:
+  name: Google sheet API
+  techno_type: API
+  link: https://developers.google.com/sheets/
+ableton-live:
+  name: Ableton Live
+  techno_type: SOFT
+sublime-text:
+  name: Sublime Text
+  techno_type: SOFT
+vs-code:
+  name: VS Code
+  techno_type: SOFT
+paybox:
+  name: PAYBOX
+  techno_type: API
+  link: http://www1.paybox.com/
+bootstrap:
+  name: Bootstrap
+  icon: fa-brands fa-html5
+  techno_type: FRAMEWORK
+  link: https://getbootstrap.com/
+linux:
+  name: LINUX
+  icon: fa-brands fa-linux
+  techno_type: OS
+  link: https://fr.wikipedia.org/wiki/Linux
+flash:
+  name: Flash
+  techno_type: SOFT
+  link: https://fr.wikipedia.org/wiki/Adobe_Flash
+ssh:
+  name: SSH
+  icon: fa-solid fa-lock
+  techno_type: CLI
+  link: https://fr.wikipedia.org/wiki/Secure_Shell
+dynamodb:
+  name: DynamoDB
+  icon: fa-brands fa-aws
+  techno_type: SERVICE
+  link: https://aws.amazon.com/fr/dynamodb
+circle-ci:
+  name: Circle-CI
+  techno_type: SERVICE
+pytest:
+  name: Pytest
+  icon: fa-brands fa-python
+  techno_type: FRAMEWORK
+  link: https://docs.pytest.org/
+rust:
+  name: RUST
+  icon: fa-brands fa-rust
+  techno_type: CODE
+  link: https://www.rust-lang.org/fr
+svg:
+  name: SVG
+  techno_type: FORMAT
+  link: https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics
+redis:
+  name: Redis
+  icon: fa-solid fa-database
+  techno_type: SERVICE
+  link: https://redis.io/
+aws:
+  name: AWS
+  icon: fa-brands fa-aws
+  techno_type: SERVICE
+windows:
+  name: Windows
+  icon: fa-brands fa-windows
+  techno_type: OS
+flask:
+  name: Flask
+  icon: fa-brands fa-python
+  techno_type: FRAMEWORK
+  link: http://flask.pocoo.org/
+python:
+  name: PYTHON
+  icon: fa-brands fa-python
+  techno_type: CODE
+  link: https://www.python.org/
+postgresql:
+  name: PostgreSQL
+  icon: fa-solid fa-database
+  techno_type: SERVICE
+  link: https://www.postgresql.org/
+tumblr:
+  name: Tumblr
+  techno_type: API
+  link: https://www.tumblr.com/docs/en/api/v2
+typescript:
+  name: Typescript
+  icon: fa-brands fa-js
+  techno_type: CODE
+  link: https://www.typescriptlang.org/
+unison:
+  name: unison
+  icon: fa-solid fa-terminal
+  techno_type: CLI
+  link: https://github.com/bcpierce00/unison
+mustache:
+  name: MUSTACHE
+  icon: fa-brackets-curly
+  techno_type: FORMAT
+  link: https://mustache.github.io/
+rsync:
+  name: rsync
+  techno_type: CLI
+  link: https://fr.wikipedia.org/wiki/Rsync
+actix:
+  name: Actix
+  icon: fa-brands fa-rust
+  techno_type: FRAMEWORK
+  link: https://actix.rs/
+jquery:
+  name: Jquery
+  icon: fa-brands fa-js
+  techno_type: FRAMEWORK
+  link: https://jquery.com/
+osx:
+  name: OSX
+  icon: fa-brands fa-apple
+  techno_type: OS
+apache:
+  name: Apache
+  icon: fa-solid fa-server
+  techno_type: SERVICE
+  link: https://httpd.apache.org/
+sql:
+  name: SQL
+  icon: fa-solid fa-database
+  techno_type: CODE
+slim:
+  name: Slim
+  icon: fa-brands fa-php
+  techno_type: FRAMEWORK
+  link: https://www.slimframework.com/

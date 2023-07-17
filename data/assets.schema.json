@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assets",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Asset"
+  },
+  "definitions": {
+    "Asset": {
+      "type": "object",
+      "required": [
+        "asset_type",
+        "name",
+        "url"
+      ],
+      "properties": {
+        "asset_type": {
+          "$ref": "#/definitions/AssetType"
+        },
+        "integrity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "AssetType": {
+      "type": "string",
+      "enum": [
+        "Css",
+        "Javascript"
+      ]
+    }
+  }
+}
