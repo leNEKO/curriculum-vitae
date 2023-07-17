@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cv",
+  "type": "object",
+  "required": [
+    "contact",
+    "education",
+    "experiences",
+    "gtag"
+  ],
+  "properties": {
+    "contact": {
+      "$ref": "#/definitions/Contact"
+    },
+    "education": {
+      "$ref": "#/definitions/Education"
+    },
+    "experiences": {
+      "$ref": "#/definitions/Experiences"
+    },
+    "gtag": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "Address": {
+      "type": "object",
+      "required": [
+        "city",
+        "cp",
+        "gmap",
+        "street"
+      ],
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "cp": {
+          "type": "string"
+        },
+        "gmap": {
+          "type": "string",
+          "format": "uri"
+        },
+        "street": {
+          "type": "string"
+        }
+      }
+    },
+    "Contact": {
+      "type": "object",
+      "required": [
+        "address",
+        "birthday",
+        "career_start",
+        "email",
+        "firstname",
+        "github",
+        "job_title",
+        "lastname",
+        "website"
+      ],
+      "properties": {
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "avalaible_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "birthday": {
+          "type": "string",
+          "format": "date"
+        },
+        "career_start": {
+          "type": "string",
+          "format": "date"
+        },
+        "dispo_delay": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint8",
+          "minimum": 0.0
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri"
+        },
+        "job_title": {
+          "$ref": "#/definitions/JobTitle"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "Education": {
+      "type": "object",
+      "required": [
+        "formations",
+        "languages"
+      ],
+      "properties": {
+        "formations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entry"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entry"
+          }
+        }
+      }
+    },
+    "Entry": {
+      "type": "object",
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "comment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "Experience": {
+      "type": "object",
+      "required": [
+        "company",
+        "job_title",
+        "period",
+        "tasks",
+        "technos"
+      ],
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "job_title": {
+          "$ref": "#/definitions/JobTitle"
+        },
+        "period": {
+          "$ref": "#/definitions/Period"
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Task"
+          }
+        },
+        "technos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TechnoKey"
+          }
+        }
+      }
+    },
+    "Experiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Experience"
+      }
+    },
+    "JobTitle": {
+      "type": "string"
+    },
+    "Period": {
+      "type": "object",
+      "required": [
+        "end",
+        "start"
+      ],
+      "properties": {
+        "end": {
+          "type": "string",
+          "format": "date"
+        },
+        "start": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "Task": {
+      "type": "string"
+    },
+    "TechnoKey": {
+      "type": "string"
+    }
+  }
+}

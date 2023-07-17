@@ -1,12 +1,12 @@
-<h5>{{title}}</h5>
+<h5>{{job_title}}</h5>
 
-{{#isDispo}}
+{{#available_date}}
 <div>
 	<i class="fa fa-clock"></i>
 	<b>Disponibilité</b><br />
-	~ {{dispo}}
+	~ {{.}}
 </div>
-{{/isDispo}}
+{{/available_date}}
 
 <div>
 	<i class="fas fa-hourglass-half"></i>

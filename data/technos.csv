@@ -1,0 +1,77 @@
+techno_type,name,comment,icon,link
+API,ATOS,PSP, ,https://atos.net/fr/
+API,Google map API,,,https://developers.google.com/maps/?hl=fr
+API,Google sheet API,,,https://developers.google.com/sheets/
+API,Mailchimp,Mandrill,,https://www.mandrill.com/
+API,Mangopay,PSP,,
+API,Monetico,PSP,,https://www.monetico-paiement.fr/
+API,PAYBOX,PSP,,http://www1.paybox.com/
+API,PAYPAL,PSP,,https://www.paypal.com/fr/home
+API,Tumblr,,,https://www.tumblr.com/docs/en/api/v2
+CLI,Bower,,,https://bower.io/
+CLI,Composer,,fa-brands fa-php,https://getcomposer.org/
+CLI,GIT,❤❤❤,fa-brands fa-git,https://git-scm.com/
+CLI,make,,,https://fr.wikipedia.org/wiki/Make
+CLI,rsync,,,https://fr.wikipedia.org/wiki/Rsync
+CLI,SSH,❤,fa-solid fa-lock,https://fr.wikipedia.org/wiki/Secure_Shell
+CLI,unison,,fa-solid fa-terminal,https://www.cis.upenn.edu/~bcpierce/unison/
+CLI,Xdebug,❤❤❤,fa-brands fa-php,
+CODE,Actionscript,,,https://fr.wikipedia.org/wiki/ActionScript
+CODE,C,,,https://fr.wikipedia.org/wiki/C%2B%2B
+CODE,GO,,,
+CODE,JAVA,,,https://www.java.com/fr/
+CODE,Javascript,,fa-brands fa-js,https://fr.wikipedia.org/wiki/JavaScript
+CODE,PHP,,fa-brands fa-php,http://php.net/manual/fr/intro-whatis.php
+CODE,PYTHON,❤❤❤,fa-brands fa-python,https://www.python.org/
+CODE,Ruby,,,
+CODE,RUST,❤❤,fa-brands fa-rust,https://www.rust-lang.org/fr
+CODE,SASS,❤ Scss / Sass,fa-brands fa-sass,https://sass-lang.com/
+CODE,Shell,Bash / Sh,fa-solid fa-terminal,https://fr.wikipedia.org/wiki/Bourne-Again_shell
+CODE,SQL,,fa-solid fa-database,
+CODE,Typescript,,fa-brands fa-js,https://www.typescriptlang.org/
+FORMAT,HTML5,,fa-brands fa-html5,https://fr.wikipedia.org/wiki/HTML5
+FORMAT,JSON,❤❤❤,https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg,https://www.json.org/json-fr.html
+FORMAT,Markdown,,fa-brands fa-markdown,https://fr.wikipedia.org/wiki/Markdown
+FORMAT,MUSTACHE,❤ Moteur de Template,fa-brackets-curly,https://mustache.github.io/
+FORMAT,oEmbed,,,https://oembed.com/
+FORMAT,OPENGRAPH,,,http://ogp.me/
+FORMAT,SVG,,,https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics
+FRAMEWORK,Actix,(web) Rust,fa-brands fa-rust,https://actix.rs/
+FRAMEWORK,Bootstrap,"3, 4",fa-brands fa-html5,https://getbootstrap.com/
+FRAMEWORK,Click,(cli) Python,fa-brands fa-python,https://palletsprojects.com/p/flask/
+FRAMEWORK,Flask,(web) Python,fa-brands fa-python,http://flask.pocoo.org/
+FRAMEWORK,Jest,,fa-brands fa-js,https://symfony.com/
+FRAMEWORK,Jquery,Javascript,fa-brands fa-js,https://jquery.com/
+FRAMEWORK,Phpunit,(TU) PHP,fa-brands fa-php,https://phpunit.de/
+FRAMEWORK,Pytest,(TU) Python,fa-brands fa-python,https://docs.pytest.org
+FRAMEWORK,Serverless,,fa-brands fa-js,https://www.serverless.com/
+FRAMEWORK,Slim,(web) PHP,fa-brands fa-php,https://www.slimframework.com/
+FRAMEWORK,Symfony,(web) PHP,fa-brands fa-symfony,https://symfony.com/
+OS,LINUX,Debian / Ubuntu / Fedora,fa-brands fa-linux,https://fr.wikipedia.org/wiki/Linux
+OS,OSX,,fa-brands fa-apple,
+OS,Windows,,fa-brands fa-windows,
+SERVICE,Algolia,,fa-brands fa-algolia,https://www.algolia.com/fr/
+SERVICE,AMQP,,fa-solid fa-server,https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol
+SERVICE,Apache,,fa-solid fa-server,https://httpd.apache.org/
+SERVICE,AWS,,fa-brands fa-aws,
+SERVICE,Blackfire,,fa-brands fa-php,https://www.blackfire.io/php/
+SERVICE,Circle-CI,,,
+SERVICE,Cron,,,https://fr.wikipedia.org/wiki/Cron
+SERVICE,Docker,,fa-brands fa-docker,https://www.docker.com/
+SERVICE,DynamoDB,,fa-brands fa-aws,https://aws.amazon.com/fr/dynamodb
+SERVICE,gitlab,,fa-brands fa-gitlab,https://about.gitlab.com/
+SERVICE,MySQL,database,fa-solid fa-database,https://www.mysql.com/fr/
+SERVICE,Nginx,,fa-solid fa-server,
+SERVICE,NodeJS,,fa-brands fa-node-js,https://nodejs.org
+SERVICE,PostgreSQL,,fa-solid fa-database,https://www.postgresql.org/
+SERVICE,Redis,,fa-solid fa-database,https://redis.io/
+SERVICE,SQS,,fa-brands fa-aws,https://aws.amazon.com/fr/sqs
+SOFT,Ableton Live,❤❤,,
+SOFT,Bitwig Studio,❤❤❤,,
+SOFT,Flash,,,https://fr.wikipedia.org/wiki/Adobe_Flash
+SOFT,Gimp,,,https://www.gimp.org/fr/
+SOFT,Inkscape,❤❤❤,,https://inkscape.org/fr/
+SOFT,Reaper,,,https://www.reaper.fm/
+SOFT,Sublime Text,❤❤❤,,
+SOFT,Suite Adobe,,,https://www.adobe.com
+SOFT,VS Code,❤❤❤,,

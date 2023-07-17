@@ -3,7 +3,7 @@
 	<div id="header">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6">
-				{{{adresse}}}
+				{{{address}}}
 			</div>
 			<div class="col-xs-12 col-sm-6 d-xs-block d-sm-none">
 				<br />
@@ -14,11 +14,10 @@
 			</div>
 		</div>
 	</div>
-
 	<br />
 
 	<div class="cv">
-		{{#data.education}}
+		{{#cv.education}}
 		<div class="row">
 			<div class="col-xs-6 col-sm-4">
 				<h3 class="text-uppercase">Formation</h3>
@@ -52,7 +51,7 @@
 				</h4>
 			</div>
 		</div>
-		{{/data.education}}
+		{{/cv.education}}
 
 		<hr />
 		{{{experiences}}}

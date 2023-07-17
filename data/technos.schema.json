@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Technos",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/definitions/Techno"
+  },
+  "definitions": {
+    "Techno": {
+      "type": "object",
+      "required": [
+        "name",
+        "techno_type"
+      ],
+      "properties": {
+        "icon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "name": {
+          "type": "string"
+        },
+        "techno_type": {
+          "$ref": "#/definitions/TechnoType"
+        }
+      }
+    },
+    "TechnoType": {
+      "type": "string",
+      "enum": [
+        "CODE",
+        "FORMAT",
+        "API",
+        "OS",
+        "CLI",
+        "FRAMEWORK",
+        "SERVICE",
+        "SOFT"
+      ]
+    }
+  }
+}
