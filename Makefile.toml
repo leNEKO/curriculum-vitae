@@ -6,13 +6,13 @@ script = [
 ]
 
 [tasks.index]
+# TODO check how to use proper git CI job to build index.html
 script = [
   'cargo run -- build data/cv.yml | npx prettier@latest --parser html > index.html'
 ]
 
 [tasks.dev]
 script = [
-  'touch /tmp/cv.html',
-  'xdg-open /tmp/cv.html',
+  'xdg-open cv.html',
   'cargo watch -w src -w data -s "cargo make index"'
 ]
