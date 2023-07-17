@@ -1,0 +1,117 @@
+# yaml-language-server: $schema=cv.schema.json
+gtag: UA-118003449-1
+contact:
+  address:
+    city: Trévoux
+    cp: '01600'
+    gmap: https://www.google.fr/maps/place/Trévoux
+    street: 310, rue des Magnolias Grandiflora
+  birthday: 1977-10-08
+  career_start: 2004-01-01
+  dispo_delay: 2
+  email: le.neko@gmail.com
+  firstname: Nicolas
+  github: https://github.com/leNEKO
+  is_dispo: true
+  job_title: Développeur Backend
+  lastname: Masson
+  website: https://leneko.github.io/
+education:
+  formations:
+    - comment: niveau BAC
+      title: Autodidacte
+  languages:
+    - title: Français
+    - comment: niveau B2
+      title: Anglais
+experiences:
+  - company: Marjory
+    job_title: Tech Lead
+    period:
+      end: 2023-06-10
+      start: 2022-11-01
+    tasks:
+      - Développement microservice serverless
+      - Gestion déploiement release, CI/CD
+      - Maintenance, gestion incidents
+      - Tooling / scripting
+    technos:
+      [
+        serverless,
+        jest,
+        typescript,
+        python,
+        rust,
+        nodejs,
+        dynamodb,
+        gitlab,
+        algolia,
+        docker,
+        git,
+        shell,
+        linux,
+        aws,
+      ]
+  - company: Wizaplace
+    job_title: Développeur Backend
+    period:
+      end: 2022-11-01
+      start: 2018-01-01
+    tasks:
+      - Maintenance applicative
+      - Benchmarking / améliorations des performances de l'application
+      - Développement de features
+      - Tooling / scripting
+      - Reprise de données / ETL
+      - Patch management / maj sécurité
+    technos:
+      [
+        symfony,
+        phpunit,
+        php,
+        python,
+        mysql,
+        redis,
+        sqs,
+        nginx,
+        amqp,
+        docker,
+        blackfire,
+        algolia,
+        git,
+        shell,
+        linux,
+        aws,
+      ]
+  - company: Hurleur Média
+    job_title: Développeur Fullstack
+    period:
+      end: 2018-01-01
+      start: 2008-01-01
+    tasks:
+      - Conception, développement, déploiement, intégration d'une plateforme d'eCommerce
+      - Conception, développement, déploiement, intégration d'une plateforme CMS
+      - Administration de serveurs Linux dédiés et virtualisés
+    technos:
+      [
+        php,
+        javascript,
+        html,
+        css,
+        sass,
+        jquery,
+        mysql,
+        apache,
+        unison,
+        shell,
+        linux,
+      ]
+  - company: Indépendant
+    job_title: Développeur Flash/ActionScript
+    period:
+      end: 2008-01-01
+      start: 2004-01-01
+    tasks:
+      - Créations de site dynamique avec la platforme Flash/ActionScript
+      - Applications interactives multimédia
+    technos: [actionscript, php, mysql, apache, flash]
