@@ -26,7 +26,9 @@
 			<br />
 			<small>
 				<a href="{{website}}">{{website}}</a>
-				<i class="fas fa-arrow-left"></i> ce CV à jour
+				<i class="fas fa-arrow-left"></i>
+				<span lang="fr">ce CV à jour</span>
+				<span lang="en">this CV up to date</span>
 			</small>
 		</div>
 	</div>
