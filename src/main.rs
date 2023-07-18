@@ -2,7 +2,7 @@ use std::path::PathBuf;
 
 use anyhow::Result;
 use clap::{Parser, Subcommand, ValueEnum};
-use cv::{Asset, Assets, Cv, Experience, Techno, Technos};
+use curriculum_vitae::{Asset, AssetType, Assets, Cv, Experience, Techno, Technos};
 use grass::Options;
 use schemars::{schema::RootSchema, schema_for};
 use serde::Serialize;
@@ -83,8 +83,8 @@ fn build(file_path: &PathBuf) -> Result<()> {
     );
 
     let assets = Assets::from_yaml(&"data/assets.yml".into())?;
-    let stylesheets = assets.get_by_asset_type(cv::AssetType::Css);
-    let scripts = assets.get_by_asset_type(cv::AssetType::Javascript);
+    let stylesheets = assets.get_by_asset_type(AssetType::Css);
+    let scripts = assets.get_by_asset_type(AssetType::Javascript);
 
     #[derive(Serialize)]
     struct IndexData<'a> {

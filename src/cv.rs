@@ -1,5 +1,5 @@
 use core::fmt;
-use std::{fs::File, path::PathBuf};
+use std::{collections::HashMap, fs::File, path::PathBuf};
 
 use anyhow::{Context, Result};
 use chrono::{Datelike, Months, NaiveDate, Utc};
@@ -9,14 +9,47 @@ use url::Url;
 
 use crate::{Techno, TechnoKey, Technos};
 
+#[derive(Deserialize, Serialize, Debug, JsonSchema, Hash, PartialEq, Eq, Clone)]
+pub struct Locale(String);
+
+#[derive(Deserialize, Serialize, Debug, JsonSchema, Clone)]
+pub struct LocalizedString(HashMap<Locale, String>);
+
+#[test]
+fn test_localized_data_unserialize() -> Result<()> {
+    #[derive(Deserialize, Serialize, Debug, JsonSchema)]
+    struct MyData {
+        title: LocalizedString,
+        content: LocalizedString,
+    }
+
+    let input = r#"
+        title:
+            en: my title
+            fr: mon titre
+        content:
+            en: my content
+            fr: mon contenu
+    "#;
+
+    let actual: MyData = serde_yaml::from_str(input)?;
+    assert_eq!(
+        "mon contenu",
+        actual.content.0.get(&Locale("fr".into())).unwrap()
+    );
+    dbg!(actual);
+
+    Ok(())
+}
+
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
 pub struct Entry {
-    title: String,
-    comment: Option<String>,
+    title: LocalizedString,
+    comment: Option<LocalizedString>,
 }
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema, Clone)]
-pub struct JobTitle(String);
+pub struct JobTitle(LocalizedString);
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
 pub struct Education {
@@ -46,6 +79,7 @@ pub struct Contact {
     dispo_delay: Option<u8>, // in months
     job_title: JobTitle,
     address: Address,
+    mobility: Option<LocalizedString>,
 }
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
@@ -61,13 +95,19 @@ impl fmt::Display for Period {
 }
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
-pub struct Task(String);
+pub struct Task(LocalizedString);
+
+#[derive(Deserialize, Serialize, Debug, JsonSchema)]
+pub struct Company {
+    name: String,
+    link: Option<Url>,
+}
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
 pub struct Experience {
     pub period: Period,
     job_title: JobTitle,
-    company: String,
+    company: Option<Company>,
     tasks: Vec<Task>,
     technos: Vec<TechnoKey>,
 }
@@ -100,11 +140,13 @@ pub struct Info {
     job_title: JobTitle,
     available_date: Option<String>,
     elapsed: u32, // years
+    mobility: Option<LocalizedString>,
 }
 
 impl Cv {
     pub fn from_yaml(path: &PathBuf) -> Result<Self> {
-        Ok(serde_yaml::from_reader(File::open(path)?).expect("Invalid path"))
+        Ok(serde_yaml::from_reader(File::open(path)?) //
+            .expect("Invalid path"))
     }
 
     pub fn get_info(&self) -> Result<Info> {
@@ -120,6 +162,7 @@ impl Cv {
             job_title: self.contact.job_title.clone(),
             available_date: available_date.map(|d| d.format("%B %Y").to_string()),
             elapsed,
+            mobility: self.contact.mobility.clone(),
         })
     }
 }

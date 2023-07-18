@@ -47,6 +47,24 @@
         }
       }
     },
+    "Company": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "Contact": {
       "type": "object",
       "required": [
@@ -103,6 +121,16 @@
         "lastname": {
           "type": "string"
         },
+        "mobility": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/LocalizedString"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "phone": {
           "type": [
             "string",
@@ -143,20 +171,23 @@
       ],
       "properties": {
         "comment": {
-          "type": [
-            "string",
-            "null"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/LocalizedString"
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "title": {
-          "type": "string"
+          "$ref": "#/definitions/LocalizedString"
         }
       }
     },
     "Experience": {
       "type": "object",
       "required": [
-        "company",
         "job_title",
         "period",
         "tasks",
@@ -164,7 +195,14 @@
       ],
       "properties": {
         "company": {
-          "type": "string"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Company"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "job_title": {
           "$ref": "#/definitions/JobTitle"
@@ -193,7 +231,13 @@
       }
     },
     "JobTitle": {
-      "type": "string"
+      "$ref": "#/definitions/LocalizedString"
+    },
+    "LocalizedString": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "Period": {
       "type": "object",
@@ -213,7 +257,7 @@
       }
     },
     "Task": {
-      "type": "string"
+      "$ref": "#/definitions/LocalizedString"
     },
     "TechnoKey": {
       "type": "string"

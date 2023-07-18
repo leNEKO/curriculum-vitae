@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html>
   <title></title>
 
   <head>
@@ -32,36 +32,12 @@
     />
 
     <script
-      defer
       async
-      src="https://code.jquery.com/jquery-3.3.0.min.js"
-    ></script>
-
-    <script
       defer
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    ></script>
-
-    <script
-      defer
-      async
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    ></script>
-
-    <script
-      defer
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"
-    ></script>
-
-    <script
-      defer
-      async
       src="https://kit.fontawesome.com/b7e6100e35.js"
     ></script>
     <style>
-      @import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato");
+      @import url("https://fonts.googleapis.com/css?family=Fira+Sans|Lato|Roboto");
       h1,
       h2,
       h3,
@@ -164,6 +140,32 @@
         font-size: 20px;
       }
     </style>
+    <script defer>
+      const LANGS = ["fr", "en"];
+      const FALLBACK_LANG = "en";
+
+      function getAvailableLang() {
+        for (const lang of LANGS) {
+          if (navigator.language.includes(lang)) {
+            return lang;
+          }
+        }
+
+        return FALLBACK_LANG;
+      }
+
+      function showTranslation() {
+        const availableLang = getAvailableLang();
+        const translatedElements = document.querySelectorAll("[lang]");
+        translatedElements.forEach((element) => {
+          if (element.getAttribute("lang") != availableLang) {
+            element.style.display = "none";
+          }
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", showTranslation);
+    </script>
   </head>
 
   <body>
@@ -214,51 +216,53 @@
           </div>
           <div class="col-xs-12 col-sm-6 d-xs-block d-sm-none">
             <br />
-            <h5>Développeur Backend</h5>
+            <h5 lang="fr">Développeur Backend</h5>
+            <h5 lang="en">Backend developper</h5>
 
             <div>
               <i class="fa fa-clock"></i>
-              <b>Disponibilité</b><br />
+              <b lang="fr">Disponibilité</b><b lang="en">Availability</b><br />
               ~ September 2023
             </div>
 
             <div>
-              <i class="fas fa-hourglass-half"></i>
-              <b>Années d'expériences</b><br />
-              19 ans
-            </div>
-
-            <div>
-              <i class="fa fa-map"></i>
-              <b>Mobilité géographique</b><br />
-              Région de Lyon<br />
-              <small>
-                <em>(Je n'ai pas le permis)</em>
-              </small>
+              <div lang="fr">
+                <i class="fa fa-map"></i>
+                <b>Mobilité géographique</b><br />
+                Région de Lyon / Télétravail<br /><small
+                  >(Je n'ai pas le permis)</small
+                >
+              </div>
+              <div lang="en">
+                <i class="fa fa-map"></i>
+                <b>Mobility</b><br />
+                Lyon surroundings / Remote
+              </div>
             </div>
           </div>
           <div class="col-sm-6 text-right d-none d-sm-block">
-            <h5>Développeur Backend</h5>
+            <h5 lang="fr">Développeur Backend</h5>
+            <h5 lang="en">Backend developper</h5>
 
             <div>
               <i class="fa fa-clock"></i>
-              <b>Disponibilité</b><br />
+              <b lang="fr">Disponibilité</b><b lang="en">Availability</b><br />
               ~ September 2023
             </div>
 
             <div>
-              <i class="fas fa-hourglass-half"></i>
-              <b>Années d'expériences</b><br />
-              19 ans
-            </div>
-
-            <div>
-              <i class="fa fa-map"></i>
-              <b>Mobilité géographique</b><br />
-              Région de Lyon<br />
-              <small>
-                <em>(Je n'ai pas le permis)</em>
-              </small>
+              <div lang="fr">
+                <i class="fa fa-map"></i>
+                <b>Mobilité géographique</b><br />
+                Région de Lyon / Télétravail<br /><small
+                  >(Je n'ai pas le permis)</small
+                >
+              </div>
+              <div lang="en">
+                <i class="fa fa-map"></i>
+                <b>Mobility</b><br />
+                Lyon surroundings / Remote
+              </div>
             </div>
           </div>
         </div>
@@ -267,20 +271,27 @@
 
       <div class="cv">
         <div class="row">
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4" lang="fr">
             <h3 class="text-uppercase">Formation</h3>
             <h4>
               <small>
                 <ul class="stack">
-                  <li>
-                    Autodidacte
-                    <small><em>(niveau BAC)</em></small>
-                  </li>
+                  <li>Autodidacte</li>
                 </ul>
               </small>
             </h4>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-4" lang="en">
+            <h3 class="text-uppercase">Education</h3>
+            <h4>
+              <small>
+                <ul class="stack">
+                  <li>Self-educated</li>
+                </ul>
+              </small>
+            </h4>
+          </div>
+          <div class="col-xs-6 col-sm-8" lang="fr">
             <br class="d-sm-none" />
             <h3 class="text-uppercase">Langues</h3>
             <h4>
@@ -295,18 +306,39 @@
               </small>
             </h4>
           </div>
+          <div class="col-xs-6 col-sm-8" lang="en">
+            <br class="d-sm-none" />
+            <h3 class="text-uppercase">Languages</h3>
+            <h4>
+              <small>
+                <ul class="stack">
+                  <li>French</li>
+                  <li>
+                    English
+                    <small><em>(B2 level)</em></small>
+                  </li>
+                </ul>
+              </small>
+            </h4>
+          </div>
         </div>
 
         <hr />
-        <h3 class="text-uppercase">Expérience professionnelle</h3>
+        <h3 class="text-uppercase" lang="fr">Expérience professionnelle</h3>
+        <h3 class="text-uppercase" lang="en">Work experience</h3>
 
         <div class="section">
           <div class="row">
             <div class="col">
               <h4>
                 <small>2022 - 2023</small><br />
-                Tech Lead<br />
-                <small>@Marjory</small>
+
+                <span lang="fr">Tech Lead</span><span lang="en">Tech Lead</span>
+                <br />
+                <small>
+                  @
+                  <a href="https://marjory.io/" target="info">Marjory</a>
+                </small>
               </h4>
             </div>
           </div>
@@ -389,10 +421,22 @@
           </div>
           <div class="row">
             <ul>
-              <li>Développement microservice serverless</li>
-              <li>Gestion déploiement release, CI/CD</li>
-              <li>Maintenance, gestion incidents</li>
-              <li>Tooling / scripting</li>
+              <li>
+                <span lang="fr">Développement microservice serverless</span
+                ><span lang="en">Serverless microservices development</span>
+              </li>
+              <li>
+                <span lang="fr">Gestion déploiement release, CI/CD</span
+                ><span lang="en">Release deployment management, CI/CD</span>
+              </li>
+              <li>
+                <span lang="fr">Maintenance, gestion incidents</span
+                ><span lang="en">Maintenance, incident management</span>
+              </li>
+              <li>
+                <span lang="fr">Tooling / scripting</span
+                ><span lang="en">Tooling / scripting</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -401,8 +445,16 @@
             <div class="col">
               <h4>
                 <small>2018 - 2022</small><br />
-                Développeur Backend<br />
-                <small>@Wizaplace</small>
+
+                <span lang="fr">Développeur Backend</span
+                ><span lang="en">Backend Developer</span>
+                <br />
+                <small>
+                  @
+                  <a href="https://www.wizaplace.com/" target="info"
+                    >Wizaplace</a
+                  >
+                </small>
               </h4>
             </div>
           </div>
@@ -498,15 +550,32 @@
           </div>
           <div class="row">
             <ul>
-              <li>Maintenance applicative</li>
               <li>
-                Benchmarking / améliorations des performances de
-                l&#39;application
+                <span lang="fr">Maintenance applicative</span
+                ><span lang="en">Application maintenance</span>
               </li>
-              <li>Développement de features</li>
-              <li>Tooling / scripting</li>
-              <li>Reprise de données / ETL</li>
-              <li>Patch management / maj sécurité</li>
+              <li>
+                <span lang="fr"
+                  >Benchmarking / améliorations des performances de
+                  l&#39;application</span
+                ><span lang="en">Application benchmarking / optimization</span>
+              </li>
+              <li>
+                <span lang="fr">Développement de features</span
+                ><span lang="en">Features development</span>
+              </li>
+              <li>
+                <span lang="fr">Tooling / scripting</span
+                ><span lang="en">Tooling / scripting</span>
+              </li>
+              <li>
+                <span lang="fr">Reprise de données / ETL</span
+                ><span lang="en">External system data import / ETL</span>
+              </li>
+              <li>
+                <span lang="fr">Patch management / maj sécurité</span
+                ><span lang="en">Patch management</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -515,8 +584,18 @@
             <div class="col">
               <h4>
                 <small>2008 - 2018</small><br />
-                Développeur Fullstack<br />
-                <small>@Hurleur Média</small>
+
+                <span lang="fr">Développeur Fullstack</span
+                ><span lang="en">Fullstack Developer</span>
+                <br />
+                <small>
+                  @
+                  <a
+                    href="http://web.archive.org/web/20171029120124/http://www.hurleur.com/content.php?categorie_id=107&amp;tag=e-commerce"
+                    target="info"
+                    >Hurleur Média</a
+                  >
+                </small>
               </h4>
             </div>
           </div>
@@ -595,14 +674,28 @@
           <div class="row">
             <ul>
               <li>
-                Conception, développement, déploiement, intégration d&#39;une
-                plateforme d&#39;eCommerce
+                <span lang="fr"
+                  >Conception, développement, déploiement, intégration d&#39;une
+                  plateforme d&#39;eCommerce</span
+                ><span lang="en"
+                  >Custom Ecommerce platform development, deployment,
+                  integration</span
+                >
               </li>
               <li>
-                Conception, développement, déploiement, intégration d&#39;une
-                plateforme CMS
+                <span lang="fr"
+                  >Conception, développement, déploiement, intégration d&#39;une
+                  plateforme CMS</span
+                ><span lang="en"
+                  >Custom CMS platform development, deployment,
+                  integration</span
+                >
               </li>
-              <li>Administration de serveurs Linux dédiés et virtualisés</li>
+              <li>
+                <span lang="fr"
+                  >Administration de serveurs Linux dédiés et virtualisés</span
+                ><span lang="en">Linux Web servers administration</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -611,8 +704,10 @@
             <div class="col">
               <h4>
                 <small>2004 - 2008</small><br />
-                Développeur Flash/ActionScript<br />
-                <small>@Indépendant</small>
+
+                <span lang="fr">Développeur Flash/ActionScript</span
+                ><span lang="en">Flash/ActionScript Developer</span>
+                <br />
               </h4>
             </div>
           </div>
@@ -655,9 +750,17 @@
           <div class="row">
             <ul>
               <li>
-                Créations de site dynamique avec la platforme Flash/ActionScript
+                <span lang="fr"
+                  >Créations de site dynamique avec la platforme
+                  Flash/ActionScript</span
+                ><span lang="en"
+                  >Dynamical Flash/ActionScript websites development</span
+                >
               </li>
-              <li>Applications interactives multimédia</li>
+              <li>
+                <span lang="fr">Applications interactives multimédia</span
+                ><span lang="en">Multimedia applications development</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -668,7 +771,8 @@
 
     <div id="bonus" class="noscreen">
       <div>
-        J'<i class="fa-solid fa-heart"></i>
+        <span lang="fr">J'</span><span lang="en">I </span
+        ><i class="fa-solid fa-heart"></i>
         <i class="fa-brands fa-rust"></i>
         &amp;
         <i class="fa-brands fa-python"></i>
