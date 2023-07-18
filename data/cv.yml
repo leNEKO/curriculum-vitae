@@ -13,28 +13,48 @@ contact:
   firstname: Nicolas
   github: https://github.com/leNEKO
   is_dispo: true
-  job_title: Développeur Backend
+  job_title:
+    fr: Développeur Backend
+    en: Backend developper
   lastname: Masson
   website: https://leneko.github.io/
+  mobility:
+    fr: Région de Lyon / Télétravail<br/><small>(Je n'ai pas le permis)</small>
+    en: Lyon surroundings / Remote
 education:
   formations:
-    - comment: niveau BAC
-      title: Autodidacte
+    - title:
+        fr: Autodidacte
+        en: Self-educated
   languages:
-    - title: Français
-    - comment: niveau B2
-      title: Anglais
+    - title:
+        fr: Français
+        en: French
+    - comment:
+        fr: niveau B2
+        en: B2 level
+      title:
+        fr: Anglais
+        en: English
 experiences:
-  - company: Marjory
-    job_title: Tech Lead
+  - company:
+      name: Marjory
+      link: https://marjory.io
+    job_title:
+      fr: Tech Lead
+      en: Tech Lead
     period:
       end: 2023-06-10
       start: 2022-11-01
     tasks:
-      - Développement microservice serverless
-      - Gestion déploiement release, CI/CD
-      - Maintenance, gestion incidents
-      - Tooling / scripting
+      - fr: Développement microservice serverless
+        en: Serverless microservices development
+      - fr: Gestion déploiement release, CI/CD
+        en: Release deployment management, CI/CD
+      - fr: Maintenance, gestion incidents
+        en: Maintenance, incident management
+      - fr: Tooling / scripting
+        en: Tooling / scripting
     technos:
       [
         serverless,
@@ -52,18 +72,28 @@ experiences:
         linux,
         aws,
       ]
-  - company: Wizaplace
-    job_title: Développeur Backend
+  - company:
+      name: Wizaplace
+      link: https://www.wizaplace.com
+    job_title:
+      fr: Développeur Backend
+      en: Backend Developer
     period:
       end: 2022-11-01
       start: 2018-01-01
     tasks:
-      - Maintenance applicative
-      - Benchmarking / améliorations des performances de l'application
-      - Développement de features
-      - Tooling / scripting
-      - Reprise de données / ETL
-      - Patch management / maj sécurité
+      - fr: Maintenance applicative
+        en: Application maintenance
+      - fr: Benchmarking / améliorations des performances de l'application
+        en: Application benchmarking / optimization
+      - fr: Développement de features
+        en: Features development
+      - fr: Tooling / scripting
+        en: Tooling / scripting
+      - fr: Reprise de données / ETL
+        en: External system data import / ETL
+      - fr: Patch management / maj sécurité
+        en: Patch management
     technos:
       [
         symfony,
@@ -83,15 +113,22 @@ experiences:
         linux,
         aws,
       ]
-  - company: Hurleur Média
-    job_title: Développeur Fullstack
+  - company:
+      name: Hurleur Média
+      link: http://web.archive.org/web/20171029120124/http://www.hurleur.com/content.php?categorie_id=107&tag=e-commerce
+    job_title:
+      fr: Développeur Fullstack
+      en: Fullstack Developer
     period:
       end: 2018-01-01
       start: 2008-01-01
     tasks:
-      - Conception, développement, déploiement, intégration d'une plateforme d'eCommerce
-      - Conception, développement, déploiement, intégration d'une plateforme CMS
-      - Administration de serveurs Linux dédiés et virtualisés
+      - fr: Conception, développement, déploiement, intégration d'une plateforme d'eCommerce
+        en: Custom Ecommerce platform development, deployment, integration
+      - fr: Conception, développement, déploiement, intégration d'une plateforme CMS
+        en: Custom CMS platform development, deployment, integration
+      - fr: Administration de serveurs Linux dédiés et virtualisés
+        en: Linux Web servers administration
     technos:
       [
         php,
@@ -106,12 +143,15 @@ experiences:
         shell,
         linux,
       ]
-  - company: Indépendant
-    job_title: Développeur Flash/ActionScript
+  - job_title:
+      fr: Développeur Flash/ActionScript
+      en: Flash/ActionScript Developer
     period:
       end: 2008-01-01
       start: 2004-01-01
     tasks:
-      - Créations de site dynamique avec la platforme Flash/ActionScript
-      - Applications interactives multimédia
+      - fr: Créations de site dynamique avec la platforme Flash/ActionScript
+        en: Dynamical Flash/ActionScript websites development
+      - fr: Applications interactives multimédia
+        en: Multimedia applications development
     technos: [actionscript, php, mysql, apache, flash]

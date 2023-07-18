@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html>
 <title>{{title}}</title>
 
 <head>
@@ -20,9 +20,37 @@
 	<link rel="stylesheet" href="{{url}}" integrity="{{integrity}}" crossorigin="anonymous" />
 	{{/stylesheets}}
 	{{#scripts}}
-	<script defer async src="{{url}}"></script>
+	<script async defer src="{{url}}"></script>
 	{{/scripts}}
 	{{{style}}}
+	<script defer>
+		const LANGS = ['fr', 'en'];
+		const FALLBACK_LANG = 'en';
+
+		function getAvailableLang() {
+			for (const lang of LANGS) {
+				if (navigator.language.includes(lang)) {
+					return lang;
+				}
+			}
+
+			return FALLBACK_LANG;
+		}
+
+		function showTranslation() {
+			const availableLang = getAvailableLang();
+			const translatedElements = document.querySelectorAll('[lang]');
+			translatedElements.forEach(
+				(element) => {
+					if (element.getAttribute('lang') != availableLang) {
+						element.style.display = 'none';
+					}
+				}
+			);
+		}
+
+		window.addEventListener('DOMContentLoaded', showTranslation);
+	</script>
 </head>
 
 <body>
@@ -30,7 +58,7 @@
 
 	<div id="bonus" class="noscreen">
 		<div>
-			J'<i class="fa-solid fa-heart"></i>
+			<span lang="fr">J'</span><span lang="en">I </span><i class="fa-solid fa-heart"></i>
 			<i class="fa-brands fa-rust"></i>
 			&amp;
 			<i class="fa-brands fa-python"></i>

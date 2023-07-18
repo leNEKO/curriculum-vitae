@@ -1,23 +1,8 @@
 # yaml-language-server: $schema=assets.schema.json
-- asset_type: Javascript
-  integrity: sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=
-  name: jquery
-  url: https://code.jquery.com/jquery-3.3.0.min.js
-- asset_type: Javascript
-  integrity: sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q
-  name: popper
-  url: https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
-- asset_type: Javascript
-  integrity: sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl
-  name: bootstrap
-  url: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
 - asset_type: Css
   integrity: sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm
   name: bootstrap
   url: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
-- asset_type: Javascript
-  name: mustache
-  url: https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js
 - asset_type: Javascript
   name: font-awesome
   url: https://kit.fontawesome.com/b7e6100e35.js

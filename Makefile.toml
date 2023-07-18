@@ -13,6 +13,6 @@ script = [
 
 [tasks.dev]
 script = [
-  'xdg-open cv.html',
+  'xdg-open index.html',
   'cargo watch -w src -w data -s "cargo make index"'
 ]
