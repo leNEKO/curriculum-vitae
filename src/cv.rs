@@ -67,8 +67,8 @@ pub struct Address {
 
 #[derive(Deserialize, Serialize, Debug, JsonSchema)]
 pub struct Contact {
-    firstname: String,
-    lastname: String,
+    pub firstname: String,
+    pub lastname: String,
     email: String, // TODO: Email type
     website: Url,
     github: Url,
@@ -77,7 +77,7 @@ pub struct Contact {
     career_start: NaiveDate,
     avalaible_date: Option<NaiveDate>,
     dispo_delay: Option<u8>, // in months
-    job_title: JobTitle,
+    pub job_title: JobTitle,
     address: Address,
     mobility: Option<LocalizedString>,
 }

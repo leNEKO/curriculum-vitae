@@ -88,6 +88,7 @@ fn build(file_path: &PathBuf) -> Result<()> {
 
     #[derive(Serialize)]
     struct IndexData<'a> {
+        title: String,
         gtag: &'a String,
         content: String,
         scripts: Vec<&'a Asset>,
@@ -95,6 +96,10 @@ fn build(file_path: &PathBuf) -> Result<()> {
         style: String,
     }
     let index_data = IndexData {
+        title: format!(
+            "{} {} - Curriculum vitae",
+            &cv.contact.firstname, &cv.contact.lastname
+        ),
         content,
         gtag: &cv.gtag,
         scripts,
